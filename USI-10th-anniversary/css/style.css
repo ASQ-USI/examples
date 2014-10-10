@@ -1,0 +1,12 @@
+
+.source {display : none;}
+
+/* Attempt to adapt the screen to a mobile phone */
+@media only screen 
+and (max-width : 320px) {
+
+
+ .step article {font-size: 80px;}
+ .step ol {margin-left:32px;}
+ .step {overflow-y: scroll;}
+}
