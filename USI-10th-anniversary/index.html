@@ -99,13 +99,13 @@
           <h3 class="asq-stem">Che cos'è un virus informatico?</h3>
           <ol class="asq-options">
             <li class="asq-option">
-              un file che é in grado di infettare il proprio computer
+              un file che infetta un computer
             </li>
             <li class="asq-option">
-              un software che è in grado di infettare il proprio computer anche se non eseguito
+              un software che è infetta un computer anche se non eseguito
             </li>
             <li class="asq-option" data-correct="true">
-              un software che è in grado, una volta eseguito, di infettare il proprio computer
+              un software che, una volta eseguito, infetta un computer
             </li>
           </ol>
         </article>
@@ -612,6 +612,17 @@
 		<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/impress.js"></script>
+    <script>//impress().init()</script>
+
+    <script>
+    //make sure that long questions can be scrolled
+    //all slides get the height of the current browser window
+    $( window ).resize(function() {
+      var ww=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var wh=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+      //assuming impress default config set to 1024 width
+      $(".step").height(wh * 1024/ww);
+    });</script>
 
   </body>
 </html>
