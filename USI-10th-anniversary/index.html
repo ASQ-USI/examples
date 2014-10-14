@@ -59,7 +59,7 @@
           setTimeout(tick,350);
         }</script>
         What is your name?
-        <input type="text" id="playername"></input>
+        <input type="text" id="playername">
         <button class='btn btn-primary' onclick="start()">Click to start</button>
         <article class="asq-welcome-screen"></article>
       </section>
@@ -85,6 +85,7 @@
 
 
       <section class="step" id="sq1info" data-x="3000" data-y="1000">
+        <article>
           <h3>Chi è il secondo uomo più ricco del mondo?</h3>
           <ol>
             <li>
@@ -500,10 +501,14 @@
     </script>
 		<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/impress.js"></script>
+    <script>impress().init()</script>
     <script>
       radioStyles= ['svg-fill', 'svg-circle', 'svg-swirl']
-      var random = Math.floor(Math.random() * (radioStyles.length - 1));
-      $('.asq-question').addClass('svg-input svg-radio' + ' ' + radioStyles[random] )
+      $('.asq-question').each(function(){
+        var random = Math.floor(Math.random() * (radioStyles.length - 1));
+        $(this).addClass('svg-input svg-radio' + ' ' + radioStyles[random] )
+      })
     </script>
      <script src="js/svgcheckbx.js"></script>
      <script>
@@ -512,8 +517,6 @@
       $(this).closest('label')[action]('checked');
      })
      </script>
-    <script src="js/impress.js"></script>
-    <script>impress().init()</script>
   
   </body>
 </html>
