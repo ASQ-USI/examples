@@ -16,6 +16,19 @@
     <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
     <link href="css/asq-default-theme.css" type="text/css" rel="stylesheet"/>
     <link href="css/svg-inputs.css" type="text/css" rel="stylesheet"/>
+    <style>
+      .asq-correct-light{
+        background-color: #3A612A;
+      }
+
+      .asq-wrong-light{
+        background-color: #862525;
+      }
+
+      .asq-confidence-label{
+        color: #a0a0a0;
+      }
+    </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   </head>
 
@@ -33,8 +46,8 @@
     <div id="impress" data-transition-duration="400">
 
       <section class="step" id="slide01" data-x="0" data-y="0">
-        <h1>Software Engineering Trivia 123</h1>
-        <h3>Answer as many questions as you can</h3>
+        <h1>Software Engineering Trivia</h1>
+        <h3>Rispondi a più domande possibile</h3>
         <p id="countdown" style="font-size:2em"></p>
         <script>function start() {
           var name = document.getElementById("playername").value;
@@ -58,9 +71,9 @@
           }
           setTimeout(tick,350);
         }</script>
-        What is your name?
+        Qual è il tuo nome?
         <input type="text" id="playername">
-        <button class='btn btn-primary' onclick="start()">Click to start</button>
+        <button class='btn btn-primary' onclick="start()">Clicca per iniziare</button>
         <article class="asq-welcome-screen"></article>
       </section>
 
@@ -552,7 +565,8 @@
      })
      </script>
      <script>
-     $('.asq-question button.btn-success').text("Invia");
+     $('.asq-exercise button[type="submit"].btn-success').text("Invia");
+     $('.asq-confidence-label').text("Quanto sei sicuro?");
      </script>
   
   </body>
