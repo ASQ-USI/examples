@@ -15,6 +15,7 @@
 		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
     <link href="css/asq-default-theme.css" type="text/css" rel="stylesheet"/>
+    <link href="css/svg-inputs.css" type="text/css" rel="stylesheet"/>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   </head>
 
@@ -49,17 +50,17 @@
             if (countdown == 0) {
               setTimeout(function() {
                 window.location.hash = "sq1";
-              }, 1000);
+              }, 350);
               d.innerHTML = "go!"
             } else {
-              setTimeout(tick,1000);
+              setTimeout(tick,350);
             }
           }
-          setTimeout(tick,1000);
+          setTimeout(tick,350);
         }</script>
         What is your name?
         <input type="text" id="playername"></input>
-        <button onclick="start()">Click to start</button>
+        <button class='btn btn-primary' onclick="start()">Click to start</button>
         <article class="asq-welcome-screen"></article>
       </section>
 
@@ -474,11 +475,6 @@
         Final stats
 </section>
 
-    <div class="hint">
-      <p>
-        Use a spacebar or arrow keys to navigate
-      </p>
-    </div>
     <script>
 		if ("ontouchstart" in document.documentElement) {
 			document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
@@ -486,8 +482,20 @@
     </script>
 		<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      radioStyles= ['svg-fill', 'svg-circle', 'svg-swirl']
+      var random = Math.floor(Math.random() * (radioStyles.length - 1));
+      $('.asq-question').addClass('svg-input svg-radio' + ' ' + radioStyles[random] )
+    </script>
+     <script src="js/svgcheckbx.js"></script>
+     <script>
+     $('.asq-option input[type="radio"]').on('change', function(){
+      var action = this.checked? 'addClass': 'removeClass';
+      $(this).closest('label')[action]('checked');
+     })
+     </script>
     <script src="js/impress.js"></script>
-    <script>//impress().init()</script>
+    <script>impress().init()</script>
   
   </body>
 </html>
