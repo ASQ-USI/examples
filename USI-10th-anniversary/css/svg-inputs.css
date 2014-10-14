@@ -6,48 +6,48 @@
     box-sizing: border-box;
 }
 
-.ac-custom {
+.svg-input .asq-option {
 	padding: 0 3em;
 	max-width: 900px;
 	margin: 0 auto;
 }
 
-.ac-custom h2 {
+.svg-input .asq-option h2 {
 	font-size: 3em;
 	font-weight: 300;
 	padding: 0 0 0.5em;
 	margin: 0 0 30px;
 }
 
-.ac-custom ul,
-.ac-custom ol {
+.svg-input .asq-option ul,
+.svg-input .asq-option ol {
 	list-style: none;
 	padding: 0;
 	margin: 0 auto;
 	max-width: 800px;
 }
 
-.ac-custom li {
+.svg-input .asq-option li {
 	margin: 0 auto;
 	padding: 2em 0;
 	position: relative;
 }
 
-.ac-custom label {
+.svg-input .asq-option label {
 	display: inline-block;
 	position: relative;
-	font-size: 2em;
+	/*font-size: 2em;*/
 	padding: 0 0 0 80px;
 	vertical-align: top;
-	color: rgba(0,0,0,0.2);
+	color: rgba(247, 247, 247, 0.7);
 	cursor: pointer;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
 
-.ac-custom input[type="checkbox"],
-.ac-custom input[type="radio"],
-.ac-custom label::before {
+.svg-input .asq-option input[type="checkbox"],
+.svg-input .asq-option input[type="radio"],
+.svg-input .asq-option label::before {
 	width: 50px;
 	height: 50px;
 	top: 50%;
@@ -57,8 +57,8 @@
 	cursor: pointer;
 }
 
-.ac-custom input[type="checkbox"],
-.ac-custom input[type="radio"] {
+.svg-input .asq-option input[type="checkbox"],
+.svg-input .asq-option input[type="radio"] {
 	opacity: 0;
 	-webkit-appearance: none;
 	display: inline-block;
@@ -66,30 +66,30 @@
 	z-index: 100;
 }
 
-.ac-custom label::before {
+.svg-input .asq-option label::before {
 	content: '';
 	border: 4px solid #fff;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
 
-.ac-radio label::before {
+.svg-radio .asq-option label::before {
 	border-radius: 50%;
 }
 
-.ac-custom input[type="checkbox"]:checked + label,
-.ac-custom input[type="radio"]:checked + label {
-	color: #fff;
+.svg-input .asq-option label.checked,
+.svg-input .asq-option label.checked {
+	color: #f7f7f7;
 } 
 
-.ac-custom input[type="checkbox"]:checked + label::before,
-.ac-custom input[type="radio"]:checked + label::before {
+.svg-input .asq-option label.checked::before,
+.svg-input .asq-option label.checked::before {
 	opacity: 0.8;
 }
 
 /* General SVG and path styles */
 
-.ac-custom svg {
+.svg-input .asq-option svg {
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -99,7 +99,7 @@
 	pointer-events: none;
 }
 
-.ac-custom svg path {
+.svg-input .asq-option svg path {
 	stroke: #fdfcd3;
 	stroke-width: 13px;
 	stroke-linecap: round;
@@ -110,9 +110,9 @@
 /* Specific input, SVG and path styles */
 
 /* Circle */
-.ac-circle input[type="checkbox"],
-.ac-circle input[type="radio"],
-.ac-circle label::before {
+.svg-circle .asq-option input[type="checkbox"],
+.svg-circle .asq-option input[type="radio"],
+.svg-circle .asq-option label::before {
 	width: 30px;
 	height: 30px;
 	margin-top: -15px;
@@ -120,55 +120,55 @@
 	position: absolute;
 }
 
-.ac-circle label::before {
+.svg-circle .asq-option label::before {
 	background-color: #fff;
 	border: none;
 }
 
-.ac-circle svg {
+.svg-circle .asq-option svg {
 	width: 70px;
 	height: 70px;
 	margin-top: -35px;
 	left: -10px;
 }
 
-.ac-circle svg path {
+.svg-circle .asq-option svg path {
 	stroke-width: 5px;
 } 
 
 /* Box Fill */
-.ac-boxfill svg path {
+.svg-boxfill .asq-option svg path {
 	stroke-width: 8px;
 } 
 
 /* Swirl */
-.ac-swirl svg path {
+.svg-swirl .asq-option svg path {
 	stroke-width: 8px;
 }
 
 /* List */
-.ac-list ol {
+.svg-list ol {
 	list-style: decimal;
 	list-style-position: inside;
 }
 
-.ac-list ol li {
+.svg-list ol li {
 	font-size: 2em;
 	padding: 1em 1em 0 2em;
 	text-indent: -40px;
 }
 
-.ac-list ol li label {
+.svg-list ol li label {
 	font-size: 1em;
 	text-indent: 0;
 	padding-left: 30px;
 }
 
-.ac-list label::before {
+.svg-list label::before {
 	display: none;
 }
 
-.ac-list svg {
+.svg-list svg {
 	width: 100%;
 	height: 80px;
 	left: 0;
@@ -176,13 +176,6 @@
 	margin-top: 0px;
 }
 
-.ac-list svg path {
+.svg-list svg path {
 	stroke-width: 4px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 50em) {
-	section {
-		font-size: 80%;
-	}
 }

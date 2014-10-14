@@ -34,8 +34,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     min-height: 740px;
 
-    color: #333;
-    background: #efefef;
+    color: #f7f7f7;
+    background: #282828;
 }
 .pull-left{
 	float: left;
@@ -120,7 +120,7 @@ body {
 
 
 h1, h2, h3, h4{
-
+    color: #ffdf00;
 }
 
 h1{
