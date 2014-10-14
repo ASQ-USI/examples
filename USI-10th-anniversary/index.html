@@ -15,7 +15,6 @@
 		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
     <link href="css/asq-default-theme.css" type="text/css" rel="stylesheet"/>
-    <link href="css/component.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   </head>
 
@@ -33,14 +32,39 @@
     <div id="impress">
 
       <section class="step" id="slide01" data-x="0" data-y="0">
-        <h1>Software Engineering Trivia</h1>
+        <h1>Software Engineering Trivia 123</h1>
         <h3>Answer as many questions as you can</h3>
-        <hr />
+        <p id="countdown" style="font-size:2em"></p>
+        <script>function start() {
+          var name = document.getElementById("playername").value;
+          //name.setAttribute("disabled","true");
+          console.log(name);
+          //send the name to asq
+
+          var countdown = 3;
+          function tick() {
+            var d = document.getElementById("countdown");
+            d.innerHTML = countdown;
+            countdown--;
+            if (countdown == 0) {
+              setTimeout(function() {
+                window.location.hash = "sq1";
+              }, 1000);
+              d.innerHTML = "go!"
+            } else {
+              setTimeout(tick,1000);
+            }
+          }
+          setTimeout(tick,1000);
+        }</script>
+        What is your name?
+        <input type="text" id="playername"></input>
+        <button onclick="start()">Click to start</button>
         <article class="asq-welcome-screen"></article>
       </section>
 
 
-      <section class="step ac-custom ac-radio ac-fill" id="sq1" data-x="3000" data-y="0" data-z="1000">
+      <section class="step" id="sq1" data-x="3000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-1">
           <h3 class="asq-stem">Chi è il secondo uomo più ricco del mondo?</h3>
           <ol class="asq-options">
@@ -59,7 +83,7 @@
       </section>
 
 
-      <section class="step" id="sq2" data-x="4000" data-y="0" data-z="1000">
+      <section class="step" id="sq2" data-x="4000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-2">
           <h3 class="asq-stem">Quanto costava 1 GB di spazio su disco nel 1990?</h3>
           <ol class="asq-options">
@@ -77,7 +101,7 @@
         <p class="source">http://www.mkomo.com/cost-per-gigabyte</p>
       </section>
 
-      <section class="step" id="sq3" data-x="5000" data-y="0" data-z="1000">
+      <section class="step" id="sq3" data-x="5000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-3">
           <h3 class="asq-stem">Quanto costa 1 GB di spazio su disco oggi, nel 2014?</h3>
           <ol class="asq-options">
@@ -96,7 +120,7 @@
       </section>
 
 
-     <section class="step" id="sq4" data-x="6000" data-y="0" data-z="1000">
+     <section class="step" id="sq4" data-x="6000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-4">
           <h3 class="asq-stem">Che cos'è un virus informatico?</h3>
           <ol class="asq-options">
@@ -115,7 +139,7 @@
       </section>
 
 
-     <section class="step" id="sq5" data-x="7000" data-y="0" data-z="1000">
+     <section class="step" id="sq5" data-x="7000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-5">
           <h3 class="asq-stem">Nel 1956 l'IBM lanciò il primo "super" computer con Hard Disk. Quanto pesava e quanti data poteva contenere questo Hard Disk?</h3>
           <ol class="asq-options">
@@ -134,7 +158,7 @@
       </section>
 
 
-     <section class="step" id="sq6" data-x="8000" data-y="0" data-z="1000">
+     <section class="step" id="sq6" data-x="8000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-6">
           <h3 class="asq-stem">Quale era la password che gli Stati Uniti hanno utilizzato per otto anni a protezione del sistema di controllo dei missili nucleari?</h3>
           <ol class="asq-options">
@@ -153,7 +177,7 @@
       </section>
 
 
-    <section class="step" id="sq7" data-x="9000" data-y="0" data-z="1000">
+    <section class="step" id="sq7" data-x="9000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-7">
           <h3 class="asq-stem">Cos'era il primo "bug" individuato in un computer nel 1947?</h3>
           <ol class="asq-options">
@@ -171,7 +195,7 @@
         <p class="source">http://en.wikipedia.org/wiki/Computer#Bugs</p>
       </section>
 
- <section class="step" id="sq8" data-x="10000" data-y="0" data-z="1000">
+ <section class="step" id="sq8" data-x="10000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-8">
           <h3 class="asq-stem">Da cosa deriva il termine "toppa" (patch) usato per descrivere le correzioni da applicare al software?</h3>
           <ol class="asq-options">
@@ -190,7 +214,7 @@
       </section>
 
 
- <section class="step" id="sq9" data-x="11000" data-y="0" data-z="1000">
+ <section class="step" id="sq9" data-x="11000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-9">
           <h3 class="asq-stem">Quale sistema è stato utilizzato per costruire la casa di Bill Gates, la cui costruzione é iniziata nel 1988?</h3>
           <ol class="asq-options">
@@ -208,7 +232,7 @@
         <p class="source">http://www.tydknow.com/did-you-know-that-bill-gatess-house-was-designed-using-a-mac/</p>
 </section>
 
-<section class="step" id="sq10" data-x="12000" data-y="0" data-z="1000">
+<section class="step" id="sq10" data-x="12000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-10">
           <h3 class="asq-stem">A che anno risale il primo banner pubblicitario utilizzato sul Web?</h3>
           <ol class="asq-options">
@@ -226,7 +250,7 @@
         <p class="source">http://gizmodo.com/5984165/this-was-the-first-banner-ad-on-the-internet</p>
 </section>
 
-<section class="step" id="sq11" data-x="13000" data-y="0" data-z="1000">
+<section class="step" id="sq11" data-x="13000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-11">
           <h3 class="asq-stem">Quante volte è stato installato Angry Birds?</h3>
           <ol class="asq-options">
@@ -244,7 +268,7 @@
         <p class="source">http://www.edge-online.com/features/two-billion-downloads-were-just-getting-started-says-angry-birds-creator-rovio</p>
 </section>
 
-<section class="step" id="sq12" data-x="14000" data-y="0" data-z="1000">
+<section class="step" id="sq12" data-x="14000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-12">
           <h3 class="asq-stem">Quanto costa il software per far funzionare una banca?</h3>
           <ol class="asq-options">
@@ -262,7 +286,7 @@
         <p class="source">http://www.waterstechnology.com/waters/news/1611306/living-mainframes</p>
 </section>
 
-<section class="step" id="sq13" data-x="15000" data-y="0" data-z="1000">
+<section class="step" id="sq13" data-x="15000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-13">
           <h3 class="asq-stem">Quando e' nata l'ingegneria del software?</h3>
           <ol class="asq-options">
@@ -281,7 +305,7 @@
 </section>
 
 
-<section class="step" id="sq14" data-x="16000" data-y="0" data-z="1000">
+<section class="step" id="sq14" data-x="16000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-14">
           <h3 class="asq-stem">Qual è la professione più rappresentata in una banca?</h3>
           <ol class="asq-options">
@@ -299,7 +323,7 @@
         <p class="source"></p>
 </section>
 
-<section class="step" id="sq14bis" data-x="17000" data-y="0" data-z="1000">
+<section class="step" id="sq14bis" data-x="17000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-14bis">
           <h3 class="asq-stem">Aggiungere persone ad un progetto in ritardo:</h3>
           <ol class="asq-options">
@@ -318,7 +342,7 @@
 </section>
 
 
-<section class="step" id="sq15" data-x="18000" data-y="0" data-z="1000">
+<section class="step" id="sq15" data-x="18000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-15">
           <h3 class="asq-stem">In Media, quanto guadagna all'anno un ingegnere del software in Svizzera?</h3>
           <ol class="asq-options">
@@ -337,7 +361,7 @@
 </section>
 
 
-<section class="step" id="sq16" data-x="19000" data-y="0" data-z="1000">
+<section class="step" id="sq16" data-x="19000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-16">
           <h3 class="asq-stem">Per memorizzare l'elenco dei 3'245'169 numeri di telefono della guida telefonica Svizzera servono:</h3>
           <ol class="asq-options">
@@ -355,7 +379,7 @@
         <p class="source">http://tel.local.ch/en/q?what=*&where=&rid=NKnw</p>
 </section>
 
-<section class="step" id="sq17" data-x="20000" data-y="0" data-z="1000">
+<section class="step" id="sq17" data-x="20000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-17">
           <h3 class="asq-stem">Quando hanno inventato il World Wide Web?</h3>
           <ol class="asq-options">
@@ -373,7 +397,7 @@
         <p class="source">http://webfoundation.org/about/vision/history-of-the-web/</p>
 </section>
 
-<section class="step" id="sq18" data-x="21000" data-y="0" data-z="1000">
+<section class="step" id="sq18" data-x="21000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-18">
           <h3 class="asq-stem">Dove gira il software piu' grande?</h3>
           <ol class="asq-options">
@@ -391,7 +415,7 @@
         <p class="source">http://spectrum.ieee.org/transportation/systems/this-car-runs-on-code</p>
 </section>
 
-<section class="step" id="sq19" data-x="22000" data-y="0" data-z="1000">
+<section class="step" id="sq19" data-x="22000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-19">
           <h3 class="asq-stem">Quante nuove offerte di lavoro sono state pubblicate su jobs.ch nel campo del software engineering il 10 Ottobre 2014?</h3>
           <ol class="asq-options">
@@ -409,7 +433,7 @@
         <p class="source">http://www.jobs.ch/en/suche/Information-Technology-Telecom/Software-Architecture-Engineering/53/2027/YTowOnt9/60</p>
 </section>
 
-<section class="step" id="sq20" data-x="23000" data-y="0" data-z="1000">
+<section class="step" id="sq20" data-x="23000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-20">
           <h3 class="asq-stem">Una ricerca su Google consuma energia per:</h3>
           <ol class="asq-options">
@@ -427,7 +451,7 @@
         <p class="source">http://inhabitat.com/infographic-how-much-energy-does-google-use/</p>
 </section>
 
-<section class="step" id="sq21" data-x="24000" data-y="0" data-z="1000">
+<section class="step" id="sq21" data-x="24000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-21">
           <h3 class="asq-stem">In un minuto:</h3>
           <ol class="asq-options">
@@ -445,157 +469,10 @@
         <p class="source">http://www.intel.com/content/www/us/en/communications/internet-minute-infographic.html</p>
 </section>
 
-<!--
-      <section class="step" id="slide04" data-x="3750" data-y="0" data-z="2000" data-scale="1.0" data-rotate="0">
-        <article class="asq-stats" data-target-asq-question="q-1" id="stats-q-1"></article>
-      </section>
 
-      <section class="step" id="slide05" data-x="4500" data-y="0" data-z="1000">
-        <article class="asq-question multi-choice choose-0-n custom-1" id="q-2">
-          <h3 class="asq-stem">Which are the official languages of Switzerland?</h3>
-          <p class="muted">
-            Please select all correct options. It is possible that no option is correct.
-          </p>
-          <ol class="asq-options">
-            <li class="asq-option" data-asq-correct="true">
-              German
-            </li>
-            <li class="asq-option" data-asq-correct="true">
-              French
-            </li>
-            <li class="asq-option" data-asq-correct="true">
-              Italian
-            </li>
-            <li class="asq-option">
-              English
-            </li>
-            <li class="asq-option" data-asq-correct="true">
-              Rumantsch
-            </li>
-          </ol>
-        </article>
-      </section>
-
-      <section class="step" id="slide06" data-x="5250" data-y="0" data-z="2000" data-scale="1.0" data-rotate="0">
-        <article class="asq-stats" data-target-asq-question="q-2" id="stats-q-2"></article>
-      </section>
-
-      <section class="step" id="slide07" data-x="6000" data-y="0" data-z="1000" >
-        <h5>Please select all correct answers!</h5>
-        <p class="muted">
-          Please select all correct options. It is possible that no option is correct.
-        </p>
-        <article class="asq-question multi-choice choose-0-n pull-left" style="width: 430px" id="q-3">
-          <h3 class="asq-stem"><img width="200" alt="target1" src="img/rect.png"></h3>
-          <ol class="asq-options smaller">
-            <li class="asq-option" data-asq-correct="true">
-              This figure is a square.
-            </li>
-            <li class="asq-option">
-              This figure is a circle.
-            </li>
-            <li class="asq-option" data-asq-correct="true">
-              This figure is symmetric.
-            </li>
-            <li class="asq-option" data-asq-correct="true">
-              This figure has four corners.
-            </li>
-          </ol>
-        </article>
-
-        <article class="asq-question multi-choice choose-0-n pull-right" style="width: 430px" id="q-4">
-          <h3 class="asq-stem"><img width="200" alt="target1" src="img/shape.png"></h3>
-          <ol class="asq-options smaller">
-            <li class="asq-option">
-              This figure is a square.
-            </li>
-            <li class="asq-option">
-              This figure is a circle.
-            </li>
-            <li class="asq-option">
-              This figure is symmetric.
-            </li>
-            <li class="asq-option">
-              This figure has four corners.
-            </li>
-          </ol>
-        </article>
-
-      </section>
-
-      <section class="step" id="slide08" data-x="6750" data-y="0" data-z="2000" data-scale="1.0" data-rotate="0">
-        <article class="asq-stats" data-target-asq-question="q-3" id="stats-q-3"></article>
-      </section>
-
-       <section class="step" id="slide09" data-x="7500" data-y="0" data-z="1000" >
-        <section class="asq-exercise" id="ex-9">
-          <h3>This is a group of questions aka an exercise!</h3>
-          <p class="muted">
-            Please select all correct options. It is possible that no option is correct.
-          </p>
-          <article class="asq-question multi-choice choose-0-n pull-left" style="width: 430px" id="q-5">
-            <h3 class="asq-stem"><img width="200" alt="target1" src="img/rect.png"></h3>
-            <ol class="asq-options smaller">
-              <li class="asq-option" data-asq-correct="true">
-                This figure is a square.
-              </li>
-              <li class="asq-option">
-                This figure is a circle.
-              </li>
-              <li class="asq-option" data-asq-correct="true">
-                This figure is symmetric.
-              </li>
-              <li class="asq-option" data-asq-correct="true">
-                This figure has four corners.
-              </li>
-            </ol>
-          </article>
-
-          <article class="asq-question multi-choice choose-0-n pull-right" style="width: 430px" id="q-6">
-            <h3 class="asq-stem"><img width="200" alt="target1" src="img/shape.png"></h3>
-            <ol class="asq-options smaller">
-              <li class="asq-option">
-                This figure is a square.
-              </li>
-              <li class="asq-option">
-                This figure is a circle.
-              </li>
-              <li class="asq-option">
-                This figure is symmetric.
-              </li>
-              <li class="asq-option">
-                This figure has four corners.
-              </li>
-            </ol>
-          </article>
-        </section>
-      </section>
-
-      <section class="step" id="slide10" data-x="8250" data-y="0" data-z="2000" data-scale="1.0" data-rotate="0">
-        <article class="asq-stats" data-target-asq-question="q-9" id="stats-q-9"></article>
-      </section>
-
-      <section class="step" id="slide11" data-x="9000" data-y="0" data-z="1000">
-        <article class="asq-question text-input custom-1" id="q-7">
-          <h3 class="asq-stem" data-asq-correct-answer="3">What is the square root of 9?</h3>
-        </article>
-      </section>
-
-      <section class="step" id="slide12" data-x="9750" data-y="0" data-z="2000" data-scale="1.0" data-rotate="0">
-        <article class="asq-stats" data-target-asq-question="q-7" id="stats-q-7"></article>
-      </section>
-
-      <section class="step" id="slide13" data-x="10500" data-y="0" data-z="1000">
-        <article class="asq-question code-input" data-asq-syntax="javascript"  data-asq-theme="monokai" id="q-8">
-          <h3 class="asq-stem">Code an infinite loop</h3>
-        </article>
-      </section>
-
-      <section class="step" id="slide14" data-x="11250" data-y="0" data-z="2000" data-scale="1.0" data-rotate="0">
-        <article class="asq-stats" data-panes="correct, distinct-options" data-target-asq-question="q-8" id="stats-q-8"></article>
-      </section>
-
-      -->
+<section class="step" id="final" data-x="25000" data-y="0">
+        Final stats
+</section>
 
       <div id="overview" class="step" data-x="3000" data-y="0" data-scale="5"></div>
 
@@ -615,18 +492,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/impress.js"></script>
     <script>//impress().init()</script>
-    <script src="js/svgcheckbx.js"></script>
-
-    <script>
-    //make sure that long questions can be scrolled
-    //all slides get the height of the current browser window
-    $( window ).resize(function() {
-      var ww=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      var wh=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
-      //assuming impress default config set to 1024 width
-      $(".step").height(wh * 1024/ww);
-    });</script>
-
+  
   </body>
 </html>
 
