@@ -87,8 +87,8 @@ body {
 .step {
     position: relative;
     width: 960px;
-    padding: 40px;
-    margin: 20px auto;
+    /*padding: 40px;
+    margin: 20px auto;*/
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
