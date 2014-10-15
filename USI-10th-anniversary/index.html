@@ -36,6 +36,20 @@
       #playername {
         color: black;
       }
+
+      .usi-logo{
+        position:fixed;
+        top: 5px;
+        left:5px;
+        width:160px;
+      }
+
+      .anni-logo{
+        position:fixed;
+        top: 7px;
+        right: 5px;
+        width:80px;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   </head>
@@ -50,6 +64,9 @@
         For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
       </p>
     </div>
+
+    <img class="usi-logo" src="img/logo.png" alt="usi logo">
+    <img class="anni-logo" src="img/anniversary-logo.png" alt="inf-logo">
 
     <div id="impress" data-transition-duration="400">
 
@@ -80,8 +97,10 @@
           setTimeout(tick,350);
         }</script>
         Qual è il tuo nome?
-        <input type="text" id="playername">
-        <button class='btn btn-primary' onclick="start()">Clicca per iniziare</button>
+        <form action="">
+          <input type="text" id="playername">
+          <button class='btn btn-primary' onclick="start()">Clicca per iniziare</button>
+        </form>
         <article class="asq-welcome-screen"></article>
       </section>
 
