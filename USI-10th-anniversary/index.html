@@ -50,6 +50,67 @@
         right: 5px;
         width:80px;
       }
+
+
+      .engineering-logo{
+       position:fixed;
+       top: 24px;
+       left: 200px;
+       width: 60px;
+      }
+
+      .main-title{
+        position:fixed;
+        top: 0px;
+        left: 290px;
+        font-size: 3.2em;
+      }
+
+      .results{
+        font-size: 1.2em;
+      }
+
+      .result-field{
+        color: #a0a0a0;
+        font-style: italic;
+        font-size: 0.85em;
+      }
+
+      .rank-badge{
+        width: 65px;
+        height: 75px;
+        background-repeat: no-repeat;
+        background-size: 50px;
+        display: inline-block;
+        position:relative;
+        top:15px;
+        left:5px;
+      }
+
+      .rank-first .rank-value{
+        color: #f7e16a;
+      }
+
+      .rank-first .rank-badge{
+        background-image: url('img/gold-medal.png');
+      }
+
+      .rank-second .rank-value{
+        color: #c8c9cb;
+      }
+
+      .rank-second .rank-badge{
+        background-image: url('img/silver-medal.png');
+      }
+
+      .rank-third .rank-value{
+        color: #e49322;  
+      }
+
+      .rank-third .rank-badge{
+        background-image: url('img/bronze-medal.png');
+      }
+
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   </head>
@@ -66,6 +127,8 @@
     </div>
 
     <img class="usi-logo" src="img/logo.png" alt="usi logo">
+    <img class="engineering-logo" src="img/logo-software-engineering.png" alt="software engineering logo">
+    <h1 class="main-title">Software Engineering Trivia</h1>
     <img class="anni-logo" src="img/anniversary-logo.png" alt="inf-logo">
 
     <div id="impress" data-transition-duration="400">
@@ -74,32 +137,10 @@
         <h1>Software Engineering Trivia</h1>
         <h3>Rispondi a più domande possibile</h3>
         <p id="countdown" style="font-size:2em"></p>
-        <script>function start() {
-          var name = document.getElementById("playername").value;
-          //name.setAttribute("disabled","true");
-          console.log(name);
-          //send the name to asq
-
-          var countdown = 3;
-          function tick() {
-            var d = document.getElementById("countdown");
-            d.innerHTML = countdown;
-            countdown--;
-            if (countdown == 0) {
-              setTimeout(function() {
-                window.location.hash = "sq1";
-              }, 350);
-              d.innerHTML = "go!"
-            } else {
-              setTimeout(tick,350);
-            }
-          }
-          setTimeout(tick,350);
-        }</script>
         Qual è il tuo nome?
         <form action="">
           <input type="text" id="playername">
-          <button class='btn btn-primary' onclick="start()">Clicca per iniziare</button>
+          <button class='btn btn-primary' id="start-btn">Clicca per iniziare</button>
         </form>
         <article class="asq-welcome-screen"></article>
       </section>
@@ -700,15 +741,27 @@
       </section>
 
 
-
 <section class="step" id="final" data-x="25000" data-y="0">
-        Final stats
+  <article>
+    <h2>Ben fatto!</h2>
+    <div class='results' id="total-results">
+      <div class="rank">
+        <span class='result-field'>posizione:</span> <span class="rank-value">-</span><div class="rank-badge"></div>
+      </div>
+      <div class="score">
+        <span class='result-field'>punti:</span> <span class='score-value'></span>
+      </div>
+      <div class="total-time">
+        <span class='result-field'>tempo totale:</span> <span class='total-time-value'></span>
+      </div>
+    </div>
+  </article>
 </section>
 
 		<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/impress.js"></script>
-    <script>// impress().init()</script>
+    <script>impress().init()</script>
     <script>
 
       $.fn.shuffle = function() {
@@ -750,6 +803,28 @@
      <script>
      $('.asq-exercise button[type="submit"].btn-success').text("Invia");
      $('.asq-confidence-label').text("Quanto sei sicuro?");
+     </script>
+     <script>
+     $('#start-btn').on('click', start);
+     function start(evt) {
+       evt.preventDefault();
+       var name = document.getElementById("playername").value;
+       var countdown = 3;
+       var tick = function() {
+         var d = document.getElementById("countdown");
+         d.innerHTML = countdown;
+         countdown--;
+         if (countdown == 0) {
+           setTimeout(function() {
+             window.location.hash = "sq1";
+           }, 1000);
+           d.innerHTML = "go!"
+         } else {
+           setTimeout(tick,1000);
+         }
+       }
+       tick();
+     }
      </script>
   
   </body>
