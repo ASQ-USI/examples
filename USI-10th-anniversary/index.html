@@ -708,7 +708,31 @@
 		<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/impress.js"></script>
-    <script>//impress().init()</script>
+    <script>// impress().init()</script>
+    <script>
+
+      $.fn.shuffle = function() {
+          return this.each(function(){
+              var items = $(this).children().clone(true);
+              return (items.length) ? $(this).html($.shuffle(items)) : this;
+          });
+      }      
+      $.shuffle = function(arr) {
+          for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+          return arr;
+      }
+      $('.asq-options').shuffle();
+
+      //simple shuffle
+      // $('.asq-question').each(function(){
+      //   var opts = $(this).find('.asq-option').length;
+      //   //pick one
+      //   var random = Math.floor(Math.random() * (opts - 1));
+      //   var $randomOpt = $(this).find('.asq-option').eq(random)
+      //   $randomOpt.parent().prepend($randomOpt)
+      // })
+      
+    </script>
     <script>
       radioStyles= ['svg-fill', 'svg-circle', 'svg-swirl']
       $('.asq-question').each(function(){
