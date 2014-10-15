@@ -66,6 +66,10 @@
         font-size: 3.2em;
       }
 
+      #final{
+        padding: 5em;
+      }
+
       .results{
         font-size: 1.2em;
       }
@@ -799,7 +803,6 @@
      $('#start-btn').on('click', start);
      function start(evt) {
        evt.preventDefault();
-       var name = document.getElementById("playername").value;
        var countdown = 3;
        var tick = function() {
          var d = document.getElementById("countdown");
