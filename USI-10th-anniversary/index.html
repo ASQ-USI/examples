@@ -142,15 +142,15 @@
         <h3>Rispondi a più domande possibile</h3>
         <p id="countdown" style="font-size:2em"></p>
         Qual è il tuo nome?
-        <form action="">
+        <form action="" id="playername-form">
           <input type="text" id="playername">
-          <button class='btn btn-primary' id="start-btn">Clicca per iniziare</button>
+          <button type="submit" class='btn btn-primary' id="start-btn">Clicca per iniziare</button>
         </form>
         <article class="asq-welcome-screen"></article>
       </section>
 
 
-      <section class="step" id="sq1" data-x="3000" data-y="0">
+    <!--   <section class="step" id="sq1" data-x="3000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-1">
           <h3 class="asq-stem">Chi è il secondo uomo più ricco del mondo?</h3>
           <ol class="asq-options">
@@ -183,9 +183,9 @@
               Bill Gates (Microsoft, $79.4 miliardi)
             </li>
           </ol>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq2';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq2">Avanti</button>
         </p></article>
-      </section>
+      </section> -->
 
 
       <section class="step" id="sq2" data-x="4000" data-y="0">
@@ -221,7 +221,7 @@
               $9000 per 1GB nel 1990
             </li>
           </ol>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq3';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq3">Avanti</button>
         </p></article>
       </section>
 
@@ -273,7 +273,7 @@
               Come ogni software, per poter avere un effetto, il virus deve essere eseguito dal computer prima che questo venga contaminato.
             </li>
           </ol>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq5';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq5">Avanti</button>
         </p></article>
       </section>
 
@@ -324,7 +324,7 @@
               Durante il culmine della Guerra Fredda (anni ’80), l'esercito americano aveva necessità di poter rispondere rapidamente ad un attacco sul suolo americano. Per questa ragione, per ridurre al minimo ogni possibile ritardo nel lancio di un missile nucleare, per quasi due decenni ha intenzionalmente impostato i codici di lancio dei missili nucleari degli Stati Uniti a <b>00000000</b>.
             </li>
           </ol>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq7';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq7">Avanti</button>
         </p></article>
       </section>
 
@@ -353,7 +353,7 @@
         <article>
           <h3>Cos'era il primo "bug" individuato in un computer nel 1947?</h3>
           <img src="img/bug.jpg" height="400" width="300" style="float: left"/>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq8';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq8">Avanti</button>
         </p></article>
       </section>
 
@@ -380,12 +380,12 @@
         <article>
           <h3>Da cosa deriva il termine "toppa" (patch) usato per descrivere le correzioni da applicare al software?</h3>
           <img src="img/patch.jpg" height="400" width="300" style="float: left"/>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq9';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq10">Avanti</button>
         </p></article>
       </section>
 
 
- <section class="step" id="sq9" data-x="11000" data-y="0">
+<!--  <section class="step" id="sq9" data-x="11000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-9">
           <h3 class="asq-stem">Quale sistema è stato utilizzato per costruire la casa di Bill Gates, la cui costruzione é iniziata nel 1988?</h3>
           <ol class="asq-options">
@@ -401,7 +401,7 @@
           </ol>
         </article>
         <p class="source">http://www.tydknow.com/did-you-know-that-bill-gatess-house-was-designed-using-a-mac/</p>
-</section>
+</section> -->
 
 <section class="step" id="sq10" data-x="12000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-10">
@@ -426,11 +426,11 @@
           <h3>A che anno risale il primo banner pubblicitario utilizzato sul Web?</h3>
           <img src="img/ad.png" height="88" width="501"/>
           <p>Ecco il primo banner pubblicitario apparso nel 1994 sul sito HotWired.com</p>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq11';">Avanti</button>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq13">Avanti</button>
         </article>
       </section>
 
-<section class="step" id="sq11" data-x="13000" data-y="0">
+<!-- <section class="step" id="sq11" data-x="13000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-11">
           <h3 class="asq-stem">Quante volte è stato installato Angry Birds?</h3>
           <ol class="asq-options">
@@ -446,8 +446,8 @@
           </ol>
         </article>
         <p class="source">http://www.edge-online.com/features/two-billion-downloads-were-just-getting-started-says-angry-birds-creator-rovio</p>
-</section>
-
+</section> -->
+<!--
 <section class="step" id="sq12" data-x="14000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-12">
           <h3 class="asq-stem">Quanto costa il software per far funzionare una banca?</h3>
@@ -465,6 +465,7 @@
         </article>
         <p class="source">http://www.waterstechnology.com/waters/news/1611306/living-mainframes</p>
 </section>
+-->
 
 <section class="step" id="sq13" data-x="15000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-13">
@@ -488,7 +489,7 @@
         <article>
           <h3>Quando e' nata l'ingegneria del software?</h3>
           <p>L’ingegneria del software nasce ufficialmente nel 1968 a Garmisch (Germania) in un periodo in cui molti grandi progetti software fallivano miseramente. Ciò avveniva a causa dell’inesistenza di basi scientifiche e metodologie ben definite per la gestione di grandi progetti software (periodo noto come “crisi del software”).</p>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq14';">Avanti</button></p>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq14">Avanti</button></p>
         </article>
       </section>
 
@@ -533,7 +534,7 @@
         <article>
           <h3>Aggiungere persone ad un progetto in ritardo...</h3>
           <p>...di solito lo fa ritardare per via del tempo aggiuntivo di coordinamento e per la necessitá di spiegare il lavoro ai nuovi arrivati.</p>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq15';">Avanti</button></p>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq15">Avanti</button></p>
         </article>
       </section>
 
@@ -570,12 +571,12 @@
               91'333 CHF (media)
             </li>
           </ol>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq16';">Avanti</button></p>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq18">Avanti</button></p>
         </article>
       </section>
 
 
-<section class="step" id="sq16" data-x="19000" data-y="0">
+<!-- <section class="step" id="sq16" data-x="19000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-16">
           <h3 class="asq-stem">Per memorizzare l'elenco dei 3'245'169 numeri di telefono della guida telefonica Svizzera servono:</h3>
           <ol class="asq-options">
@@ -591,9 +592,9 @@
           </ol>
         </article>
         <p class="source">http://tel.local.ch/en/q?what=*&where=&rid=NKnw</p>
-</section>
+</section> -->
 
- <section class="step" id="sq16info" data-x="19000" data-y="1000">
+<!--  <section class="step" id="sq16info" data-x="19000" data-y="1000">
         <article>
           <h3>Per memorizzare l'elenco dei 3'245'169 numeri di telefono della guida telefonica Svizzera servono:</h3>
           <ol>
@@ -608,7 +609,7 @@
             </li>
           </ol>
           <p>se ogni voce (nome, indirizzo, telefono, etc.) occupa 1kb non compressa.</p>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq17';">Avanti</button></p>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq17">Avanti</button></p>
         </article>
       </section>
 
@@ -629,7 +630,7 @@
           </ol>
         </article>
         <p class="source">http://webfoundation.org/about/vision/history-of-the-web/</p>
-</section>
+</section> -->
 
 <section class="step" id="sq18" data-x="21000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-18">
@@ -650,7 +651,7 @@
 </section>
 
 
-<section class="step" id="sq18info" data-x="21000" data-y="1000">
+<!-- <section class="step" id="sq18info" data-x="21000" data-y="1000">
         <article>
           <h3>Dove gira il software piu' grande?</h3>
           <ol>
@@ -665,11 +666,11 @@
             </li>
           </ol>
           <p>MLOC = Milioni di Linee di Codice</p>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'sq19';">Avanti</button></p>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="sq19">Avanti</button></p>
         </article>
-      </section>
+      </section> -->
 
-<section class="step" id="sq19" data-x="22000" data-y="0">
+<!-- <section class="step" id="sq19" data-x="22000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-19">
           <h3 class="asq-stem">Quante nuove offerte di lavoro sono state pubblicate su jobs.ch nel campo del software engineering il 10 Ottobre 2014?</h3>
           <ol class="asq-options">
@@ -685,7 +686,7 @@
           </ol>
         </article>
         <p class="source">http://www.jobs.ch/en/suche/Information-Technology-Telecom/Software-Architecture-Engineering/53/2027/YTowOnt9/60</p>
-</section>
+</section> -->
 
 
 
@@ -707,7 +708,7 @@
         <p class="source">http://inhabitat.com/infographic-how-much-energy-does-google-use/</p>
 </section>
 
-<section class="step" id="sq21" data-x="24000" data-y="0">
+<!-- <section class="step" id="sq21" data-x="24000" data-y="0">
         <article class="asq-question multi-choice choose-1" id="q-21">
           <h3 class="asq-stem">In un minuto:</h3>
           <ol class="asq-options">
@@ -740,9 +741,9 @@
               si pubblicano <b>100</b> ore di video nuovi su YouTube
             </li>
           </ol>
-          <p class="text-right"><button class='btn btn-primary' onclick="window.location.hash = 'final';">Avanti</button></p>
+          <p class="text-right"><button class='btn btn-primary href-nav' data-hash="final">Avanti</button></p>
         </article>
-      </section>
+      </section> -->
 
 
 <section class="step" id="final" data-x="25000" data-y="0">
@@ -764,6 +765,8 @@
 
 		<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script>FastClick.attach(document.body);</script>
     <script src="js/impress.js"></script>
     <script>//impress().init()</script>
     <script>
@@ -789,37 +792,7 @@
       })
     </script>
      <script src="js/svgcheckbx.js"></script>
-     <script>
-     $('.asq-option input[type="radio"]').on('change', function(){
-      var action = this.checked? 'addClass': 'removeClass';
-      $(this).closest('label')[action]('checked');
-     })
-     </script>
-     <script>
-     $('.asq-exercise button[type="submit"].btn-success').text("Invia");
-     $('.asq-confidence-label').text("Quanto sei sicuro?");
-     </script>
-     <script>
-     $('#start-btn').on('click', start);
-     function start(evt) {
-       evt.preventDefault();
-       var countdown = 3;
-       var tick = function() {
-         var d = document.getElementById("countdown");
-         d.innerHTML = countdown;
-         countdown--;
-         if (countdown == 0) {
-           setTimeout(function() {
-             window.location.hash = "sq1";
-           }, 1000);
-           d.innerHTML = "go!"
-         } else {
-           setTimeout(tick,1000);
-         }
-       }
-       tick();
-     }
-     </script>
+     <script src="js/app.js"></script>
   
   </body>
 </html>
