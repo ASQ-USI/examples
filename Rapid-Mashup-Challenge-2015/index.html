@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Rapid Mashuup Challenge 2015</title>
+
+    <meta name="description" content="Rapid Mashup Challenge 2015" />
+    <meta name="author" content="Vasileios Triglianos" />
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		<!-- <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
+    <link href="css/layout.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script> 
+    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    
+  </head>
+
+  <body class="impress-not-supported" data-asq-role="viewer">
+
+    <div class="fallback-message">
+      <p>
+        Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+      </p>
+      <p>
+        For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+      </p>
+    </div>
+
+    <div id="impress">
+
+      <section class="step" id="slide01" data-x="0" data-y="0">
+        <h1>Rapid Mashup Challenge</h1>
+        <h3 style="font-style:italic;font-weight:300;">ICWE2015</h3>
+        <hr />
+        <asq-welcome></asq-welcome>
+      </section>
+
+<!--       <section class="step" id="slide01_2" data-x="-1500" data-y="0">
+        <h1>Rapid Mashup Challenge</h1>
+        <h3>ICWE2015</h3>
+        <hr />
+        <asq-welcome></asq-welcome>
+      </section>
+
+      <section class="step" id="slide01_3" data-x="-3000" data-y="0">
+        <h1>Rapid Mashup Challenge</h1>
+        <h3>ICWE2015</h3>
+        <hr />
+        <asq-welcome></asq-welcome>
+      </section> -->
+
+      <section class="step" id="slide02" data-x="1500" data-y="0" data-z="500">
+        <h1 class="mashup-title">Mashup title #1</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
+          <h3 class="mashup-subtitle">Mashup subtitle #1. This can be much longer. Don't over do it though.
+          </h3>
+        </div>
+        <p class="mashup-authors">Cesare Pautasso, Vasileios Triglianos, Masiar Babazadeh and Vincenzo Ferme</p>
+      </section>
+
+      <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
+        <asq-exercise exerciseid="ex1" class="exercise">
+          <asq-stem><h3 class="chunk_five">Please rate the 'Mashup title #1' mashup</h3></asq-stem>
+          <asq-rating type="stars">
+            <asq-rating-item name="mashup">Mashup</asq-rating-item>
+            <asq-rating-item name="tool">Tool</asq-rating-item>
+            <asq-rating-item name="option-3">Option #3</asq-rating-item>
+          </asq-rating >
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide04" data-x="1500" data-y="1500" data-z="500">
+        <h1 class="mashup-title">Mashup title #2</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
+          <h3 class="mashup-subtitle">Mashup subtitle #2. This can be much longer. Don't over do it though.
+          </h3>
+        </div>
+        <p class="mashup-authors">Author 1 and Author 2</p>
+      </section>
+
+      <section class="step" id="slide05" data-x="3000" data-y="1500" data-z="1000">
+        <asq-exercise exerciseid="ex1" class="exercise">
+          <asq-stem><h3 class="chunk_five">Please rate the 'Mashup title #2' mashup</h3></asq-stem>
+          <asq-rating type="stars">
+            <asq-rating-item name="mashup">Mashup</asq-rating-item>
+            <asq-rating-item name="tool">Tool</asq-rating-item>
+            <asq-rating-item name="option-3">Option #3</asq-rating-item>
+          </asq-rating >
+        </asq-exercise>
+      </section>
+
+    </div>
+
+    <script type="text/javascript" src="js/init.js"></script>
+    <script>
+    (function(){
+      window.addEventListener('polymer-ready', function() {
+        init();
+      });
+      
+    })();
+		if ("ontouchstart" in document.documentElement) {
+			document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+		}
+    </script>
+		<script src="js/jquery.js"></script>
+    <script src="js/impress.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
+
