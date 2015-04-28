@@ -13,6 +13,7 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script> 
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
@@ -47,47 +48,48 @@
       </div>
 
       <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
-        <asq-exercise exerciseid="ex1" class="exercise">
-          <asq-stem><h2>Exercise 1</h2></asq-stem>
-          <asq-multi-choice>
-            <asq-stem><h3>Which are the official languages of Switzerland?</h3></asq-stem>
-            <asq-option>English</asq-option>
-            <asq-option correct-answer="true">French</asq-option>
-            <asq-option correct-answer="true">German</asq-option>
-            <asq-option correct-answer="true">Rumantsch</asq-option>
+        <asq-exercise> 
+          <asq-stem><h2>A not re-submiitabled exercise </h2></asq-stem>
+          <asq-multi-choice selected="op3">
+            <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
+            <asq-option name="op0">Option 0</asq-option>
+            <asq-option name="op1">Option 1</asq-option>
+            <asq-option name="op2">Option 2</asq-option>
+            <asq-option name="op3">Option 3</asq-option>
           </asq-multi-choice>
         </asq-exercise>
       </section>
 
       <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
-        <asq-exercise exerciseid="ex2" class="exercise">
-          <asq-stem><h2>Exercise 2</h2></asq-stem>
-          
-          <asq-text-input placeholder="answer here">
-            <asq-stem><h3>What's the result of '2 * 3'</h3></stem>
+        <asq-exercise confidence allowresubmit>
+          <asq-stem><h2>An exercise with confidence and re-submiitabled</h2></asq-stem>
+          <asq-text-input label="value">
+            <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
+            <pre><code>
+              char a[27];
+              char *b = "abc";
+              strcpy(a, b);</code></pre>
+            <asq-solution hidden>\0</asq-solution>
           </asq-text-input>
-
         </asq-exercise>
       </section>
 
       <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000" >
-        <h5>Please answer!</h5>
-        <asq-exercise exerciseid="ex3" class="exercise">
-          <asq-stem><h2>Exercise 3</h2></asq-stem>
-          <asq-js-function-body funName="wrap(str, tagName)" question="wrap('hello World', 'div');">
-            <asq-stem class="question"><h2>Implement a function that wraps a given string with an HTML tag:</h2></asq-stem>
+        <asq-exercise confidence>
+          <asq-stem><h2>asq-js-function-body quesiton</h2></asq-stem>
+          <asq-js-function-body functionName="wrap(str, tagName)" question="wrap('hello World', 'div');">
+            <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
           </asq-js-function-body>
         </asq-exercise>
 
       </section>
 
-       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-         <asq-exercise exerciseid="ex4" class="exercise">
-          <asq-stem><h2>Exercise 4</h2></asq-stem>
-            <asq-css-select htmlcode="<ul><li class='daclass'><ul id='ghouan'><li></li><li></li><li></li></ul></li><li></li><li></li><li><div><p></p><p class='pclass'></p></div></li></ul>">
-              <asq-stem><h3>Select 'div' elements:</h3><asq-stem>
-          </asq-css-select>
-        </asq-exercise>
+      <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
+         <asq-exercise allowresubmit>
+          <asq-stem><h2>asq-css-selected question</h2></asq-stem>
+          <asq-css-select htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
+          <asq-stem><h3>Select 'div' elements:</h3></asq-stem>
+        </asq-css-select>
       </section>
 
 <!--       <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000">
@@ -103,6 +105,20 @@
             </asq-code>
         </asq-exercise>  
      </section> -->
+     <section class="step" id="slide06" data-x="9000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
+       <asq-exercise allowresubmit> 
+        <asq-stem><h2>asq-code question</h2></asq-stem>
+        <asq-code mode="java">
+        <asq-stem><h4>Implement quick sort algorithm in Java</h4></asq-stem>
+        <code>public class Main { 
+      public static void main(String args) {
+          
+      }
+  } </code>
+      </asq-code>
+      </asq-exercise>
+    </section>
+
 
       <section class="step" id="slide08" data-x="10500" data-y="0" data-z="1000">
         <asq-exercise exerciseid="ex6" class="exercise">
@@ -122,9 +138,46 @@
        </asq-exercise>
       </section>
       
+      <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
+        <asq-exercise allowresubmit>
+          <asq-stem><h2>asq-order question</h2></asq-stem>
+            <asq-order objects="#objects" vertical layout
+            hints solution='{es ist} {schneit} {und} {kalt}' >
+            <asq-stem><p>It is snowing and it is cold.</p></asq-stem>
+            <img src="./img/cs1.png"></img>  
+
+            <div target name="words" horizontal layout></div>
+            <div id="objects" horizontal layout>
+              <div object name="schneit">schneit</div>
+              <div object name="und">und</div>
+              <div object name="kalt">kalt</div>
+              <div object name="es ist">es ist</div>
+            </div>
+          </asq-order>
+        </asq-exercise> 
+      </section>
+
+      <section class="step" id="slide09" data-x="13500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
+        <asq-exercise id="buckets" allowresubmit>
+          <asq-stem><h4>asq-bucket question</h4></asq-stem>
+          <asq-buckets targets="#targets" objects="#objects">
+            <asq-stem><h5>Please classify the words according to the pronunciation of the bolded vowels</h5></asq-stem>
+            <div id="targets">
+              <div target name="Long"><span>Long</span></div>
+              <div target name="Short"><span>Short</span></div>
+              <div target name="Medium"><span>Medium</span></div>
+            </div>
+            <div id="objects">
+              <div object name="glas">Gl<b>a</b>s</div>
+              <div object name="nudeln">N<b>u</b>deln</div>
+              <div object name="platz">Pl<b>a</b>tz</div>
+              <div object name="vier">v<b>i</b>er</div>
+            </div>
+          </asq-buckets>
+    </asq-exercise> 
+      </section>
 
     </div>
-
     <div class="hint">
       <p>
         Use a spacebar or arrow keys to navigate
