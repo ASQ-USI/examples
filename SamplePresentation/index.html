@@ -20,7 +20,7 @@
     
   </head>
 
-  <body class="impress-not-supported" data-asq-role="presenter">
+  <body class="impress-not-supported" data-asq-role="viewer">
 
     <div class="fallback-message">
       <p>
@@ -49,7 +49,7 @@
 
       <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
         <asq-exercise> 
-          <asq-stem><h2>A not re-submiitabled exercise </h2></asq-stem>
+          <asq-stem><h2>&lt;asq-multi-choice&gt; question</h2></asq-stem>
           <asq-multi-choice selected="op3">
             <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
             <asq-option name="op0">Option 0</asq-option>
@@ -62,9 +62,9 @@
 
       <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
         <asq-exercise confidence allowresubmit>
-          <asq-stem><h2>An exercise with confidence and re-submiitabled</h2></asq-stem>
+          <asq-stem><h3>&lt;asq-text-input&gt; question</h3><h4>(the exercise has confidence and re-submit enabled)</h4></asq-stem>
           <asq-text-input label="value">
-            <asq-stem><h5>What's value of a[3]?</h5></asq-stem>
+            <asq-stem><h3>What's value of a[3]?</h3></asq-stem>
             <pre><code>
               char a[27];
               char *b = "abc";
@@ -76,7 +76,7 @@
 
       <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000" >
         <asq-exercise confidence>
-          <asq-stem><h2>asq-js-function-body quesiton</h2></asq-stem>
+          <asq-stem><h3>&lt;asq-js-function-body&gt; question</h3></asq-stem>
           <asq-js-function-body functionName="wrap(str, tagName)" question="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
           </asq-js-function-body>
@@ -86,9 +86,9 @@
 
       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
          <asq-exercise allowresubmit>
-          <asq-stem><h2>asq-css-selected question</h2></asq-stem>
+          <asq-stem><h3>&lt;asq-css-selected&gt; question</h3></asq-stem>
           <asq-css-select htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
-          <asq-stem><h3>Select 'div' elements:</h3></asq-stem>
+          <asq-stem><h4>Select &lt;li&gt; element that are descendants of &lt;li&gt; elements:</h4></asq-stem>
         </asq-css-select>
       </section>
 
@@ -105,11 +105,11 @@
             </asq-code>
         </asq-exercise>  
      </section> -->
-     <section class="step" id="slide06" data-x="9000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
+     <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
        <asq-exercise allowresubmit> 
-        <asq-stem><h2>asq-code question</h2></asq-stem>
-        <asq-code mode="java">
-        <asq-stem><h4>Implement quick sort algorithm in Java</h4></asq-stem>
+        <asq-stem><h3>&lt;asq-code&gt; question</h3></asq-stem>
+        <asq-code mode="java" tabSize="2" fontSize="0.85em" style="height:400px">
+        <asq-stem><h4>Implement the quick sort algorithm in Java</h4></asq-stem>
         <code>public class Main { 
       public static void main(String args) {
           
@@ -122,10 +122,11 @@
 
       <section class="step" id="slide08" data-x="10500" data-y="0" data-z="1000">
         <asq-exercise exerciseid="ex6" class="exercise">
+         <asq-stem><h3>&lt;asq-highlight&gt; question</h3></asq-stem>
          <asq-highlight theme="textmate" mode="java" style="height:700px">
            <asq-solution>{"d9534f":[{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":8},{"start":{"row":1,"column":1},"end":{"row":1,"column":7},"id":15}],"428bca":[{"start":{"row":2,"column":3},"end":{"row":2,"column":6},"id":21}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":30},{"start":{"row":1,"column":8},"end":{"row":1,"column":12},"id":37},{"start":{"row":2,"column":21},"end":{"row":2,"column":24},"id":44},{"start":{"row":2,"column":34},"end":{"row":2,"column":37},"id":50}]}
            </asq-solution>
-           <asq-stem><h3>Highlight with the appropriate color the following:</h3></asq-stem>
+           <asq-stem><h4>Highlight with the appropriate color the following:</h4></asq-stem>
            <asq-hl-color-task color="d9534f" colorName="visibility">Visibility Modifiers</asq-hl-color-task>
            <asq-hl-color-task color="428bca" colorName="var_declarations">Variable declarations</asq-hl-color-task>
            <asq-hl-color-task color="f0ad4e" colorName="other">Other keywords</asq-hl-color-task>
@@ -140,28 +141,33 @@
       
       <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
         <asq-exercise allowresubmit>
-          <asq-stem><h2>asq-order question</h2></asq-stem>
+          <asq-stem><h3>&lt;asq-order&gt; question</h3></asq-stem>
             <asq-order objects="#objects" vertical layout
             hints solution='{es ist} {schneit} {und} {kalt}' >
-            <asq-stem><p>It is snowing and it is cold.</p></asq-stem>
-            <img src="./img/cs1.png"></img>  
+            <asq-stem>
+              <h4>Put the words in the correct order:</h4>
+            </asq-stem>
+            <div style="margin: 0 auto;">
+              <p>It is snowing and it is cold.</p>
+              <img style="display:block; margin: 1em auto;"src="./img/cs1.png"></img>  
 
-            <div target name="words" horizontal layout></div>
-            <div id="objects" horizontal layout>
-              <div object name="schneit">schneit</div>
-              <div object name="und">und</div>
-              <div object name="kalt">kalt</div>
-              <div object name="es ist">es ist</div>
+              <div target name="words" horizontal layout></div>
+              <div id="objects" horizontal layout>
+                <div object name="schneit">schneit</div>
+                <div object name="und">und</div>
+                <div object name="kalt">kalt</div>
+                <div object name="es ist">es ist</div>
+              </div>
             </div>
           </asq-order>
         </asq-exercise> 
       </section>
 
-      <section class="step" id="slide09" data-x="13500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
+      <section class="step" id="slide10" data-x="13500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
         <asq-exercise id="buckets" allowresubmit>
-          <asq-stem><h4>asq-bucket question</h4></asq-stem>
+          <asq-stem><h3>&lt;asq-bucket&gt; question</h3></asq-stem>
           <asq-buckets targets="#targets" objects="#objects">
-            <asq-stem><h5>Please classify the words according to the pronunciation of the bolded vowels</h5></asq-stem>
+            <asq-stem><h4>Please classify the words according to the pronunciation of the bolded vowels</h4></asq-stem>
             <div id="targets">
               <div target name="Long"><span>Long</span></div>
               <div target name="Short"><span>Short</span></div>
@@ -174,7 +180,20 @@
               <div object name="vier">v<b>i</b>er</div>
             </div>
           </asq-buckets>
-    </asq-exercise> 
+          </asq-exercise> 
+      </section>
+
+      <section class="step" id="slide11" data-x="15000" data-y="0" data-z="1000">
+        <asq-exercise id="exercise">
+          <asq-stem><h3>&lt;asq-rating&gt; question</h3></asq-stem>
+          <asq-rating type="stars">
+            <asq-stem><h4>Please rate this tool:</h4></asq-stem>
+            <asq-rating-item name="learningcurve">Learning Curve</asq-rating-item>
+            <asq-rating-item name="expressiveness">Expressiveness</asq-rating-item>
+            <asq-rating-item name="verboseness">Verboseness</asq-rating-item>
+            <asq-rating-item name="speed">Speed</asq-rating-item>
+          </asq-rating>
+        </asq-exercise>
       </section>
 
     </div>
@@ -198,6 +217,7 @@
 		<script src="js/jquery.js"></script>
     <script src="js/impress.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>impress().init();</script>
   </body>
 </html>
 

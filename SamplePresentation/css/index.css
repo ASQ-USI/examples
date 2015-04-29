@@ -20,13 +20,6 @@ asq-exercise > asq-order /deep/ [target] > [object] {
   margin: 2px;
 }
 
-asq-exercise > asq-order {
-  width: 400px;
-
-  margin: 10px auto;
-
-}
-
 asq-exercise > asq-order /deep/ [object] {
   cursor: pointer;
   display: block;
@@ -38,7 +31,7 @@ asq-exercise > asq-order /deep/ [object] {
   border-radius: 4px;
 
   max-width: 150px;
-  margin: 1px auto;
+  margin: 1px 5px;
 }
 
 asq-exercise > asq-order[disabled] /deep/ [object] {
