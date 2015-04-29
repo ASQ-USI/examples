@@ -15,8 +15,10 @@
     <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
     <link href="css/index.css" type="text/css" rel="stylesheet"/>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script> 
-    <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    
+
+    <script src="../../webcomponentsjs/webcomponents.min.js"></script> 
+    <link rel="import" href="../../asq-elements/asq-elements.html">
     
   </head>
 
@@ -61,7 +63,7 @@
       </section>
 
       <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
-        <asq-exercise confidence allowresubmit>
+        <asq-exercise confidence maxnumsubmissions="3">
           <asq-stem><h3>&lt;asq-text-input&gt; question</h3><h4>(the exercise has confidence and re-submit enabled)</h4></asq-stem>
           <asq-text-input label="value">
             <asq-stem><h3>What's value of a[3]?</h3></asq-stem>
@@ -85,7 +87,7 @@
       </section>
 
       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-         <asq-exercise allowresubmit>
+         <asq-exercise maxnumsubmissions="2">
           <asq-stem><h3>&lt;asq-css-selected&gt; question</h3></asq-stem>
           <asq-css-select htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
           <asq-stem><h4>Select &lt;li&gt; element that are descendants of &lt;li&gt; elements:</h4></asq-stem>
@@ -106,7 +108,7 @@
         </asq-exercise>  
      </section> -->
      <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-       <asq-exercise allowresubmit> 
+       <asq-exercise maxnumsubmissions="2"> 
         <asq-stem><h3>&lt;asq-code&gt; question</h3></asq-stem>
         <asq-code mode="java" tabSize="2" fontSize="0.85em" style="height:400px">
         <asq-stem><h4>Implement the quick sort algorithm in Java</h4></asq-stem>
@@ -139,14 +141,12 @@
        </asq-exercise>
       </section>
       
-      <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-        <asq-exercise allowresubmit>
+      <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000" style="overflow-y:scroll">
+        <asq-exercise maxnumsubmissions="2">
           <asq-stem><h3>&lt;asq-order&gt; question</h3></asq-stem>
             <asq-order objects="#objects" vertical layout
             hints solution='{es ist} {schneit} {und} {kalt}' >
-            <asq-stem>
-              <h4>Put the words in the correct order:</h4>
-            </asq-stem>
+            <asq-stem><h4>Put the words in the correct order:</h4></asq-stem>
             <div style="margin: 0 auto;">
               <p>It is snowing and it is cold.</p>
               <img style="display:block; margin: 1em auto;"src="./img/cs1.png"></img>  
@@ -163,8 +163,8 @@
         </asq-exercise> 
       </section>
 
-      <section class="step" id="slide10" data-x="13500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-        <asq-exercise id="buckets" allowresubmit>
+      <section class="step" id="slide10" data-x="13500" data-y="0" data-z="1000" style="overflow-y:scroll">
+        <asq-exercise id="buckets" maxnumsubmissions="2">
           <asq-stem><h3>&lt;asq-bucket&gt; question</h3></asq-stem>
           <asq-buckets targets="#targets" objects="#objects">
             <asq-stem><h4>Please classify the words according to the pronunciation of the bolded vowels</h4></asq-stem>

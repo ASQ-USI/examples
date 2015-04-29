@@ -1,4 +1,4 @@
-asq-exercise > asq-order /deep/ [target] {
+asq-order [target] {
   min-height: 45px;
   padding: 4px;
   margin-bottom: 20px;
@@ -13,14 +13,14 @@ asq-exercise > asq-order /deep/ [target] {
 }
 
 
-asq-exercise > asq-order /deep/ [target] > [object] {
+asq-order [target] > [object] {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2px;
 }
 
-asq-exercise > asq-order /deep/ [object] {
+asq-order [object] {
   cursor: pointer;
   display: block;
   color: #a94442;
@@ -34,15 +34,15 @@ asq-exercise > asq-order /deep/ [object] {
   margin: 1px 5px;
 }
 
-asq-exercise > asq-order[disabled] /deep/ [object] {
+asq-order[disabled] [object] {
   cursor: auto;
   color: white;
   background-color: #666666;
 }
 
-asq-exercise > asq-order > img {
-  max-width: 220px;
-  height: 200px;
+asq-order > img {
+  max-width: 300px;
+  height: 300px;
   margin: 1em;
 
 }
@@ -55,7 +55,8 @@ asq-exercise > asq-order > img {
 }
 
 /*  */
-asq-exercise > asq-buckets /deep/ [target] {
+asq-buckets [target] {
+
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
@@ -67,40 +68,36 @@ asq-exercise > asq-buckets /deep/ [target] {
           transition: border .2s ease-in-out;
 
 }
-asq-exercise > asq-buckets > div#targets {
-  display: flex;
-  flex-direction: row;
-  /*justify-content: center;*/
-}
-
-asq-exercise > asq-buckets /deep/ wrapper{
+asq-buckets #targets {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-asq-exercise > asq-buckets /deep/ [target] {
+asq-buckets [target] {
   cursor: pointer;
   display: block;
   
-  min-height: 200px;
-  min-width: 150px;
+  min-height: 325px;
+  min-width: 225px;
 
 }
 
-asq-exercise > asq-buckets /deep/ [target] > [object] {
+
+asq-buckets [target] [object] {
   cursor: default;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 2px;
+  width: 100%;
 }
 
-asq-exercise > asq-buckets /deep/ [target] > [object] > [change] {
+asq-buckets [target] [change] {
   background-color: #FF6666;
 }
 
-asq-exercise > asq-buckets /deep/ [target] > span {
+asq-buckets [target] > span {
   color: #E6E6E6;
   background-color: #0080FF;
   border-color: #bce8f1;
@@ -113,27 +110,40 @@ asq-exercise > asq-buckets /deep/ [target] > span {
 
 }
 
-asq-exercise > asq-buckets[disabled] /deep/ [target] > span {
-  background-color: #000080;
+asq-buckets[disabled] [target] > span {
+  background-color: #4C4C4C;
 }
 
-asq-exercise > asq-buckets[disabled] /deep/ [target] {
+asq-buckets[disabled] [target] {
   cursor: auto;
   background-color: lightgray;
 }
 
-asq-exercise > asq-buckets {
-  max-width: auto;
-  text-align: center;
+asq-buckets [object] {
+  display: block;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  border-color: #faebcc;
+  padding: 8px 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
 
+  width: 150px;
+  margin: 1px auto;
 }
 
-asq-exercise > asq-buckets /deep/ section {
-  text-align: center;
+asq-buckets[disabled] [object] {
+  color: white;
+  background-color: #808080;
 }
 
+asq-buckets[disabled]::shadow [object] {
+  color: white;
+  background-color: #808080;
+}
 
-asq-exercise > asq-buckets /deep/ [object] {
+asq-buckets::shadow [object] {
   display: block;
   color: #a94442;
   background-color: #f2dede;
@@ -147,20 +157,28 @@ asq-exercise > asq-buckets /deep/ [object] {
   margin: 1px auto;
 }
 
-asq-exercise > asq-buckets /deep/ asq-target > [object] {
-  max-width: auto;
-}
-
-asq-exercise > asq-buckets > [object] > b {
+asq-buckets [object] > b {
   color: red;
 }
 
-asq-exercise > asq-buckets /deep/ core-icon {
+asq-buckets::shadow [object] > b {
+  color: red;
+}
+
+asq-buckets[disabled] [object] > b {
+  color: #333333;
+}
+
+asq-buckets[disabled]::shadow [object] > b {
+  color: #333333;
+}
+
+
+asq-buckets core-icon {
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
 }
 
-asq-exercise > asq-buckets /deep/ core-icon:hover {
+asq-buckets core-icon:hover {
   fill: #fb8c00;
-  padding-right: 1em;
 }
