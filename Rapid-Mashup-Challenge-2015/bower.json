@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "asq-elements": "ASQ-USI/asq-elements#master",
-    "webcomponentsjs": "~0.5.2"
+    "asq-mashup-challenge-scoreboard": "ASQ-USI/asq-mashup-challenge-scoreboard#master",
+    "webcomponentsjs": "~0.6.1"
   }
 }
