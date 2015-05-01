@@ -23,5 +23,10 @@
   "dependencies": {
     "asq-elements": "ASQ-USI/asq-elements#master",
     "webcomponentsjs": "~0.5.2"
+  },
+  "resolutions": {
+    "polymer": "~0.5.4",
+    "core-component-page": "^0.5",
+    "webcomponentsjs": "^0.5"
   }
 }
