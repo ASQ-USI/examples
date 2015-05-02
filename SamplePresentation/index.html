@@ -32,7 +32,7 @@
         For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
       </p>
     </div>
-    <asq-configuration maxnumsubmissions="0" slideflow="follow" assessment="self"></asq-configuration>
+    <asq-configuration maxnumsubmissions="999" slideflow="follow" assessment="self"></asq-configuration>
     <div id="impress">
 
       <section class="step" id="slide01" data-x="0" data-y="0">
@@ -77,7 +77,7 @@
       </section>
 
       <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000" >
-        <asq-exercise confidence maxnumsubmissions="1">
+        <asq-exercise confidence >
           <asq-stem><h3>&lt;asq-js-function-body&gt; question</h3></asq-stem>
           <asq-js-function-body functionName="wrap(str, tagName)" question="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
@@ -87,7 +87,7 @@
       </section>
 
       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-         <asq-exercise maxnumsubmissions="2">
+         <asq-exercise>
           <asq-stem><h3>&lt;asq-css-selected&gt; question</h3></asq-stem>
           <asq-css-select htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
           <asq-stem><h4>Select &lt;li&gt; element that are descendants of &lt;li&gt; elements:</h4></asq-stem>
@@ -108,7 +108,7 @@
         </asq-exercise>  
      </section> -->
      <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-       <asq-exercise maxnumsubmissions="2"> 
+       <asq-exercise> 
         <asq-stem><h3>&lt;asq-code&gt; question</h3></asq-stem>
         <asq-code mode="java" tabSize="2" fontSize="0.85em" style="height:400px">
         <asq-stem><h4>Implement the quick sort algorithm in Java</h4></asq-stem>
