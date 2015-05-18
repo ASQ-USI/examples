@@ -167,7 +167,7 @@ body {
 
 .step {
     position: relative;
-    width: 900px;
+    width: 990px;
     padding: 40px;
     margin: 20px auto;
 
@@ -481,6 +481,9 @@ p.mashup-authors{
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
+
+/* ASQ Elements*/
+/*
 .asq-confidence-label {
     font-style: italic;
     color: #555;
@@ -527,4 +530,21 @@ p.mashup-authors{
 
 .asq-rating-input {
     display: none;
+}*/
+
+asq-rating > asq-stem{
+  display: none;
+}
+
+asq-mashup-challenge-scoreboard::shadow #scoreboard {
+  font-size: 0.70em;
+}
+
+asq-mashup-challenge-scoreboard::shadow #scoreboard .header{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+asq-mashup-challenge-scoreboard::shadow #scoreboard .cell{
+  padding: 5px;
 }
