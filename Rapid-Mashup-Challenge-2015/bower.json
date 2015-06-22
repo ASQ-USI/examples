@@ -23,6 +23,7 @@
   "dependencies": {
     "asq-elements": "ASQ-USI/asq-elements#master",
     "asq-mashup-challenge-scoreboard": "ASQ-USI/asq-mashup-challenge-scoreboard#master",
-    "webcomponentsjs": "~0.6.1"
+    "webcomponentsjs": "~0.6.1",
+    "FlipClock": "~0.7.7"
   }
 }
