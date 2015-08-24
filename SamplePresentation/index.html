@@ -32,7 +32,7 @@
         For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
       </p>
     </div>
-    <asq-configuration maxNumSubmissions="999" slideflow="follow" assessment="self"></asq-configuration>
+
     <div id="impress">
 
       <section class="step" id="slide01" data-x="0" data-y="0">
@@ -52,36 +52,36 @@
       <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
         <asq-exercise> 
           <asq-stem><h2>&lt;asq-multi-choice&gt; question</h2></asq-stem>
-          <asq-multi-choice selected="op3">
+          <asq-multi-choice-q selected="op3">
             <asq-stem><h3>Here you can pick just one answer:</h3></asq-stem>
             <asq-option name="op0">Option 0</asq-option>
             <asq-option name="op1">Option 1</asq-option>
             <asq-option name="op2">Option 2</asq-option>
             <asq-option name="op3">Option 3</asq-option>
-          </asq-multi-choice>
+          </asq-multi-choice-q>
         </asq-exercise>
       </section>
 
       <section class="step" id="slide04" data-x="4500" data-y="0" data-z="1000">
-        <asq-exercise confidence maxnumsubmissions="3">
+        <asq-exercise confidence="true" maxnumsubmissions="3">
           <asq-stem><h3>&lt;asq-text-input&gt; question</h3><h4>(this exercise has confidence and re-submit enabled)</h4></asq-stem>
-          <asq-text-input label="value">
+          <asq-text-input-q label="value">
             <asq-stem><h3>What's the value of a[3]?</h3></asq-stem>
             <pre><code>
               char a[27];
               char *b = "abc";
               strcpy(a, b);</code></pre>
             <asq-solution hidden>\0</asq-solution>
-          </asq-text-input>
+          </asq-text-input-q>
         </asq-exercise>
       </section>
 
       <section class="step" id="slide05" data-x="6000" data-y="0" data-z="1000" >
-        <asq-exercise confidence >
+        <asq-exercise confidence="true" >
           <asq-stem><h3>&lt;asq-js-function-body&gt; question</h3></asq-stem>
-          <asq-js-function-body functionName="wrap(str, tagName)" question="wrap('hello World', 'div');">
+          <asq-js-function-body-q functionName="wrap(str, tagName)" question="wrap('hello World', 'div');">
             <asq-stem><h4>Implement a function that wraps a given string with an HTML tag:</h4></asq-stem>
-          </asq-js-function-body>
+          </asq-js-function-body-q>
         </asq-exercise>
 
       </section>
@@ -89,43 +89,16 @@
       <section class="step" id="slide06" data-x="7500" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
          <asq-exercise>
           <asq-stem><h3>&lt;asq-css-selected&gt; question</h3></asq-stem>
-          <asq-css-select htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
+          <asq-css-select-q htmlcode="<ul><li class='aclass'><ul id='aid'><li></li><li></li></ul></li><div><p></p><p class='bclass'></p></div></li></ul>">
           <asq-stem><h4>Select &lt;li&gt; element that are descendants of &lt;li&gt; elements:</h4></asq-stem>
-        </asq-css-select>
+        </asq-css-select-q>
       </section>
-
-<!--       <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000">
-        <asq-exercise exerciseid="ex5" class="exercise">
-          <asq-stem><h2>Exercise 0</h2></asq-stem>
-            <asq-code mode="java" tabSize="2" fontSize="0.85em" style="height:500px">
-              <asq-stem><h4>Implement a for loop in Java</h4></asq-stem>
-              <code>public class C {      
-           public void m() {
-             int i = i + 5 + ((int)5.0) + ((int)5f);
-           }
-          }</code>
-            </asq-code>
-        </asq-exercise>  
-     </section> -->
-     <section class="step" id="slide07" data-x="9000" data-y="0" data-z="1000" style="max-height:800px; overflow-y:scroll">
-       <asq-exercise> 
-        <asq-stem><h3>&lt;asq-code&gt; question</h3></asq-stem>
-        <asq-code mode="java" tabSize="2" fontSize="0.85em" style="height:400px">
-        <asq-stem><h4>Implement the quick sort algorithm in Java</h4></asq-stem>
-        <code>public class Main { 
-      public static void main(String args) {
-          
-      }
-  } </code>
-      </asq-code>
-      </asq-exercise>
-    </section>
 
 
       <section class="step" id="slide08" data-x="10500" data-y="0" data-z="1000">
         <asq-exercise exerciseid="ex6" class="exercise">
          <asq-stem><h3>&lt;asq-highlight&gt; question</h3></asq-stem>
-         <asq-highlight theme="textmate" mode="java" style="height:700px">
+         <asq-highlight-q theme="textmate" mode="java" style="height:700px">
            <asq-solution>{"d9534f":[{"start":{"row":0,"column":0},"end":{"row":0,"column":6},"id":8},{"start":{"row":1,"column":1},"end":{"row":1,"column":7},"id":15}],"428bca":[{"start":{"row":2,"column":3},"end":{"row":2,"column":6},"id":21}],"f0ad4e":[{"start":{"row":0,"column":7},"end":{"row":0,"column":12},"id":30},{"start":{"row":1,"column":8},"end":{"row":1,"column":12},"id":37},{"start":{"row":2,"column":21},"end":{"row":2,"column":24},"id":44},{"start":{"row":2,"column":34},"end":{"row":2,"column":37},"id":50}]}
            </asq-solution>
            <asq-stem><h4>Highlight with the appropriate color the following:</h4></asq-stem>
@@ -137,14 +110,14 @@
     int i = i + 5 + ((int)5.0) + ((int)5f);
   }
 }</code>
-         </asq-highlight>
+         </asq-highlight-q>
        </asq-exercise>
       </section>
       
       <section class="step" id="slide09" data-x="12000" data-y="0" data-z="1000" style="overflow-y:scroll">
         <asq-exercise >
           <asq-stem><h3>&lt;asq-order&gt; question</h3></asq-stem>
-            <asq-order objects="#objects" vertical layout
+            <asq-order-q objects="#objects" vertical layout
             hints solution='{es ist} {schneit} {und} {kalt}' >
             <asq-stem><h4>Put the words in the correct order:</h4></asq-stem>
             <div style="margin: 0 auto;">
@@ -159,14 +132,14 @@
                 <div object name="es ist">es ist</div>
               </div>
             </div>
-          </asq-order>
+          </asq-order-q>
         </asq-exercise> 
       </section>
 
       <section class="step" id="slide10" data-x="13500" data-y="0" data-z="1000" style="overflow-y:scroll">
         <asq-exercise id="buckets">
           <asq-stem><h3>&lt;asq-bucket&gt; question</h3></asq-stem>
-          <asq-buckets targets="#targets" objects="#objects">
+          <asq-buckets-q targets="#targets" objects="#objects">
             <asq-stem><h4>Please classify the words according to the pronunciation of the bolded vowels</h4></asq-stem>
             <div id="targets">
               <div target name="Long"><span>Long</span></div>
@@ -179,21 +152,8 @@
               <div object name="platz">Pl<b>a</b>tz</div>
               <div object name="vier">v<b>i</b>er</div>
             </div>
-          </asq-buckets>
+          </asq-buckets-q>
           </asq-exercise> 
-      </section>
-
-      <section class="step" id="slide11" data-x="15000" data-y="0" data-z="1000">
-        <asq-exercise id="exercise">
-          <asq-stem><h3>&lt;asq-rating&gt; question</h3></asq-stem>
-          <asq-rating type="stars">
-            <asq-stem><h4>Please rate this tool:</h4></asq-stem>
-            <asq-rating-item name="learningcurve">Learning Curve</asq-rating-item>
-            <asq-rating-item name="expressiveness">Expressiveness</asq-rating-item>
-            <asq-rating-item name="verboseness">Verboseness</asq-rating-item>
-            <asq-rating-item name="speed">Speed</asq-rating-item>
-          </asq-rating>
-        </asq-exercise>
       </section>
 
     </div>
@@ -210,11 +170,11 @@
       });
       
     })();
-		if ("ontouchstart" in document.documentElement) {
-			document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-		}
+    if ("ontouchstart" in document.documentElement) {
+      document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
     </script>
-		<script src="js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/impress.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
