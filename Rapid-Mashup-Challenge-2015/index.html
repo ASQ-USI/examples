@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Rapid Mashuup Challenge 2015</title>
+    <title>Rapid Mashup Challenge 2015</title>
 
     <meta name="description" content="Rapid Mashup Challenge 2015" />
     <meta name="author" content="Vasileios Triglianos" />
@@ -14,14 +14,17 @@
 		<!-- <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
     <link href="css/layout.css" type="text/css" rel="stylesheet"/>
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link rel="stylesheet" href="./bower_components/FlipClock/compiled/flipclock.css">
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script> 
     <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+    <link rel="import" href="bower_components/asq-rating-result/asq-rating-result.html">
     <link rel="import" href="bower_components/asq-mashup-challenge-scoreboard/asq-mashup-challenge-scoreboard.html">
-    
   </head>
 
   <body class="impress-not-supported" data-asq-role="viewer">
+
+    <header></header>
+    <footer></footer>
 
     <div class="fallback-message">
       <p>
@@ -32,84 +35,340 @@
       </p>
     </div>
 
+    <img style="position:absolute; bottom:10px;right:3px;" width="10%" src="img/icwe2015-logo.png" alt="ICWE 2015 logo">
+
+    <div id="timer"></div>
+
+    <div id="powered-by-asq">
+      Powered by <a href="http://asq.inf.usi.ch/" target="_blank">
+        <img src="img/asq.png" alt="asq" />
+      </a>
+    </div>
+
     <div id="impress">
 
       <section class="step" id="slide01" data-x="0" data-y="0">
         <h1>Rapid Mashup Challenge</h1>
         <h3 style="font-style:italic;font-weight:300;">ICWE2015</h3>
+        <p>Cesare Pautasso, Florian Daniel</p>
         <hr />
         <asq-welcome></asq-welcome>
+        <p class="muted">(Google Chrome only)</p>
       </section>
 
-<!--       <section class="step" id="slide01_2" data-x="-1500" data-y="0">
-        <h1>Rapid Mashup Challenge</h1>
-        <h3>ICWE2015</h3>
-        <hr />
-        <asq-welcome></asq-welcome>
-      </section>
+      <div id="mashup" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Mashups</h1>
+      </div>
 
-      <section class="step" id="slide01_3" data-x="-3000" data-y="0">
-        <h1>Rapid Mashup Challenge</h1>
-        <h3>ICWE2015</h3>
-        <hr />
-        <asq-welcome></asq-welcome>
-      </section> -->
+      <div id="mashup2" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Composable Web</h1>
+      </div>
 
-      <section class="step" id="slide02" data-x="1500" data-y="0" data-z="500">
-        <h1 class="mashup-title">Mashup title #1</h1>
+      <div id="mashup3" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Mashup Tools</h1>
+      </div>
+
+      <div id="mashup4" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Mashup Tools</h1>
+      <ul><li>Flow</li><li>Visual</li><li>Live</li><li>Spreadsheet</li><li>DSL</li><li>Natural Language</li></ul>
+      </div>
+
+      <div id="mashup5" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Mashup Tools Benchmarking</h1>
+      </div>
+
+      <div id="mashup6" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Rapid</h1>
+      </div>
+
+      <div id="mashup7" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Evaluation Criteria</h1>
+      <ul><li>Mashup Idea</li><li>Mashup Complexity</li><li>Mashup Solution Elegance</li><li>Tool Power</li></ul>
+      </div>
+
+      <div id="mashup8" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+        <h1 class="text-center">Jury</h1>
+        <ul style="font-size: 0.8em;">  
+          <li style="line-height: 0.65em;">Maristella Matera, Politecnico di Milano, Italy</li>
+          <li style="line-height: 0.65em;">Peep Küngas, University of Tartu (UT), Tartu, Estonia</li>
+          <li style="line-height: 0.65em;">Oscar Diaz, University of the Basque Country, Spain</li>
+          <li style="line-height: 0.65em;">Victoria Torres, Universidad Politécnica de Valencia, Spain</li>
+          <li style="line-height: 0.65em;">Nikolay Mehandjiev, University of Manchester, UK</li>
+          <li style="line-height: 0.65em;">Cinzia Cappiello, Politecnico di Milano, Italy</li>
+          <li style="line-height: 0.65em;">Michael Weiss, Carleton University, Canada</li>
+          <li style="line-height: 0.65em;">Tomas Vitvar, Czech Technical University, Czech Republic</li>
+          <li style="line-height: 0.65em;">Agnes Koschmider, Karlsruhe Institute of Technology, Germany</li>
+          <li style="line-height: 0.65em;">Saeed Aghaee, University of Cambridge, UK</li>
+          <li style="line-height: 0.65em;">Christoph Bussler, Oracle Corporation</li>
+          <li style="line-height: 0.65em;">Sven Casteleyn, Universitat Jaume I, Spain</li>
+          <li style="line-height: 0.65em;">Martin Gaedke, Chemnitz University of Technology, Germany</li>
+          <li style="line-height: 0.65em;">Tommi Mikkonen, Tampere University of Technology, Finland</li>
+        </ul>
+      </div>
+
+
+      <div id="mashup9" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Rules</h1>
+      <ol><li>Compose at least two different APIs</li><li>Pick one API from:<ul><li>Google Maps</li><li>You Tube</li><li>New York Times</li></ul></li></ol>
+      </div>
+
+      <div id="mashup10" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Time</h1>
+      <ol><li>10' Tool Introduction</li><li>10' Rapid Composition Demo</li><li>5' Jury Evaluation</li></ol>
+      </div>
+
+      <div id="mashup11" class="step flash" data-x="5000" data-y="1000" data-scale="0.5" data-rotate="0">
+      <h1 class="text-center">Challenge Participants</h1>
+      <ol><li>FlexMash</li><li>UI-Oriented Computing</li><li>Smart Composition</li><li>EFESTO</li><li>WebMakeup</li><li>WLS</li></ol>
+      </div>
+
+      <section class="step" id="slide02" data-x="2000" data-y="0" data-z="500">
+        <h1 class="mashup-title">FlexMash</h1>
         <div class="clearfix">   
-          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
-          <h3 class="mashup-subtitle">Mashup subtitle #1. This can be much longer. Don't over do it though.
+          <img class="pull-left" style="margin-right: 0.5em; width:200px;" src="img/flexmash.png"> 
+          <h3 class="mashup-subtitle">Extended Techniques for Flexible Modeling and Execution of Data Mashups
           </h3>
         </div>
-        <p class="mashup-authors">Cesare Pautasso, Vasileios Triglianos, Masiar Babazadeh and Vincenzo Ferme</p>
+        <p class="mashup-authors">Pascal Hirmer and Bernhard Mitschang</p>
       </section>
 
-      <section class="step" id="slide03" data-x="3000" data-y="0" data-z="1000">
-        <asq-exercise class="exercise">
-          <asq-stem><h3 class="chunk_five">Please rate the 'Mashup title #1' mashup</h3></asq-stem>
-          <asq-rating type="stars">
-            <asq-rating-item name="mashup">Mashup</asq-rating-item>
-            <asq-rating-item name="tool">Tool</asq-rating-item>
-            <asq-rating-item name="option-3">Option #3</asq-rating-item>
+      <section class="step timed" id="slide03" data-x="4000" data-y="0" data-z="1000">
+        <asq-exercise maxnumsubmissions="0" class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">FlexMash</h1>
+            <h3 class="mashup-subtitle">Please rate 'Extended Techniques for Flexible Modeling and Execution of Data Mashups'</h3>
+          </asq-stem>
+          <asq-rating type="stars" id="r-1">
+            <asq-stem>FlexMash</asq-stem>
+            <asq-rating-item name="idea">Mashup Idea</asq-rating-item>
+            <asq-rating-item name="complexity">Mashup Complexity</asq-rating-item>
+            <asq-rating-item name="elegance">Mashup Solution Elegance</asq-rating-item>
+            <asq-rating-item name="tool">Tool Power</asq-rating-item>
           </asq-rating >
         </asq-exercise>
       </section>
 
-      <section class="step" id="slide04" data-x="1500" data-y="1500" data-z="500">
-        <h1 class="mashup-title">Mashup title #2</h1>
-        <div class="clearfix">   
-          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
-          <h3 class="mashup-subtitle">Mashup subtitle #2. This can be much longer. Don't over do it though.
-          </h3>
-        </div>
-        <p class="mashup-authors">Author 1 and Author 2</p>
+      <section class="step" id="slide04" data-x="6000" data-y="0" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">FlexMash</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-1">
+        </asq-rating-result >
       </section>
 
-      <section class="step" id="slide05" data-x="3000" data-y="1500" data-z="1000">
-        <asq-exercise class="exercise">
-          <asq-stem><h3 class="chunk_five">Please rate the 'Mashup title #2' mashup</h3></asq-stem>
-          <asq-rating type="stars">
-            <asq-rating-item name="mashup">Mashup</asq-rating-item>
-            <asq-rating-item name="tool">Tool</asq-rating-item>
-            <asq-rating-item name="option-3">Option #3</asq-rating-item>
+      <section class="step" id="slide05" data-x="2000" data-y="1500" data-z="500">
+        <h1 class="mashup-title">UI-Oriented Computing</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
+          <h3 class="mashup-subtitle">Interactive, Live Mashup Development through UI-Oriented Computing
+          </h3>
+        </div>
+        <p class="mashup-authors">Anis Nouri and Florian Daniel</p>
+      </section>
+
+      <section class="step timed" id="slide06" data-x="4000" data-y="1500" data-z="1000">
+        <asq-exercise maxnumsubmissions="0" class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">UI-Oriented Computing</h1>
+            <h3 class="mashup-subtitle">Please rate 'Interactive, Live Mashup Development through UI-Oriented Computing'</h3>
+            </asq-stem>
+          <asq-rating type="stars" id="r-2">
+            <asq-stem>UI-Oriented Computing</asq-stem>
+            <asq-rating-item name="idea">Mashup Idea</asq-rating-item>
+            <asq-rating-item name="complexity">Mashup Complexity</asq-rating-item>
+            <asq-rating-item name="elegance">Mashup Solution Elegance</asq-rating-item>
+            <asq-rating-item name="tool">Tool Power</asq-rating-item>
           </asq-rating >
         </asq-exercise>
       </section>
 
-      <section class="step" id="slide06" data-x="1500" data-y="3000" data-z="1000">
-        <h3>Standings</h3>
+      <section class="step" id="slide07" data-x="6000" data-y="1500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">UI-Oriented Computing</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-2">
+        </asq-rating-result >
+      </section>
+
+      <section class="step" id="slide08" data-x="2000" data-y="3000" data-z="500">
+        <h1 class="mashup-title">SmartComposition</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
+          <h3 class="mashup-subtitle">Extending Web Applications to Multi-Screen Mashups
+          </h3>
+        </div>
+        <p class="mashup-authors">Michael Krug, Fabian Wiedemann and Martin Gaedke</p>
+      </section>
+
+      <section class="step timed" id="slide09" data-x="4000" data-y="3000" data-z="1000">
+        <asq-exercise maxnumsubmissions="0" class="exercise">
+          <asq-stem>
+           <h1 class="mashup-title">SmartComposition</h1>
+            <h3 class="mashup-subtitle">Please rate 'SmartComposition: Extending Web Applications to Multi-Screen Mashups'</h3></asq-stem>
+          <asq-rating type="stars" id="r-3">
+            <asq-stem>SmartComposition</asq-stem>
+            <asq-rating-item name="idea">Mashup Idea</asq-rating-item>
+            <asq-rating-item name="complexity">Mashup Complexity</asq-rating-item>
+            <asq-rating-item name="elegance">Mashup Solution Elegance</asq-rating-item>
+            <asq-rating-item name="tool">Tool Power</asq-rating-item>
+          </asq-rating >
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide10" data-x="6000" data-y="3000" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">SmartComposition</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-3">
+        </asq-rating-result >
+      </section>
+
+      <section class="step" id="slide11" data-x="2000" data-y="4500" data-z="500">
+        <h1 class="mashup-title">EFESTO</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em; width: 300px;" src="img/efesto.png"> 
+          <h3 class="mashup-subtitle">A platform for the End-User Development of Interactive Workspaces for Data Exploration
+          </h3>
+        </div>
+        <p class="mashup-authors">Giuseppe Desolda, Carmelo Ardito and Maristella Matera</p>
+      </section>
+
+      <section class="step timed" id="slide12" data-x="4000" data-y="4500" data-z="1000">
+        <asq-exercise maxnumsubmissions="0" class="exercise">
+          <asq-stem>
+            <h1 class="mashup-title">EFESTO</h1>
+            <h3 class="mashup-subtitle">Please rate 'EFESTO: A platform for the End-User Development of Interactive Workspaces for Data Exploration'</h3></asq-stem>
+          <asq-rating type="stars" id="r-4">
+            <asq-stem>EFESTO</asq-stem>
+            <asq-rating-item name="idea">Mashup Idea</asq-rating-item>
+            <asq-rating-item name="complexity">Mashup Complexity</asq-rating-item>
+            <asq-rating-item name="elegance">Mashup Solution Elegance</asq-rating-item>
+            <asq-rating-item name="tool">Tool Power</asq-rating-item>
+          </asq-rating >
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide13" data-x="6000" data-y="4500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">EFESTO</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-4">
+        </asq-rating-result >
+      </section>
+
+      <section class="step" id="slide14" data-x="2000" data-y="6000" data-z="500">
+        <h1 class="mashup-title">WebMakeup</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em;" src="img/webmakeup.png"> 
+          <h3 class="mashup-subtitle">Empowering Users to Mod Websites
+          </h3>
+        </div>
+        <p class="mashup-authors">Oscar Diaz, Iñigo Aldalur, Cristobal Arellano, Haritz Medina and Sergio Firmenich</p>
+      </section>
+
+      <section class="step timed" id="slide15" data-x="4000" data-y="6000" data-z="1000">
+        <asq-exercise maxnumsubmissions="0" class="exercise">
+          <asq-stem>
+           <h1 class="mashup-title">WebMakeup</h1>
+
+            <h3 class="mashup-subtitle">Please rate 'WebMakeup: Empowering Users to Mod Websites'</h3></asq-stem>
+          <asq-rating type="stars" id="r-5">
+            <asq-stem>WebMakeup</asq-stem>
+            <asq-rating-item name="idea">Mashup Idea</asq-rating-item>
+            <asq-rating-item name="complexity">Mashup Complexity</asq-rating-item>
+            <asq-rating-item name="elegance">Mashup Solution Elegance</asq-rating-item>
+            <asq-rating-item name="tool">Tool Power</asq-rating-item>
+          </asq-rating >
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide16" data-x="6000" data-y="6000" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">WebMakeup</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-5">
+        </asq-rating-result >
+      </section>
+
+      <section class="step" id="slide17" data-x="2000" data-y="7500" data-z="500">
+        <h1 class="mashup-title">WLS</h1>
+        <div class="clearfix">   
+          <img class="pull-left" style="margin-right: 0.5em;" src="http://placehold.it/230x190"> 
+          <h3 class="mashup-subtitle">Mashup Development with Web Liquid Streams
+          </h3>
+        </div>
+        <p class="mashup-authors">Masiar Babazadeh, Andrea Gallidabino and Cesare Pautasso</p>
+      </section>
+
+      <section class="step timed" id="slide18" data-x="4000" data-y="7500" data-z="1000">
+        <asq-exercise maxnumsubmissions="0" class="exercise">
+          <asq-stem>
+           <h1 class="mashup-title">WLS</h1>
+
+            <h3 class="mashup-subtitle">Please rate 'WLS: Mashup Development with Web Liquid Streams'</h3></asq-stem>
+          <asq-rating type="stars" id="r-6">
+            <asq-stem>WLS</asq-stem>
+            <asq-rating-item name="idea">Mashup Idea</asq-rating-item>
+            <asq-rating-item name="complexity">Mashup Complexity</asq-rating-item>
+            <asq-rating-item name="elegance">Mashup Solution Elegance</asq-rating-item>
+            <asq-rating-item name="tool">Tool Power</asq-rating-item>
+          </asq-rating >
+        </asq-exercise>
+      </section>
+
+      <section class="step" id="slide19" data-x="6000" data-y="7500" data-z="0">
+        <asq-stem>
+          <h1 class="mashup-title">WLS</h1>
+          <h3 class="mashup-subtitle">Results</h3>
+        </asq-stem>
+        <asq-rating-result targetid="r-6">
+        </asq-rating-result >
+      </section>
+
+      <section class="step" id="slide20" data-x="2000" data-y="9000" data-z="1000">
+        <!-- <h1>Rapid Mashup Challenge</h1> -->
+        <h3 class="mashup-subtitle" style="margin:0; text-align:center;">Rapid Mashup Challenge</h3>
+        <h1 class="mashup-title" style="margin:0; text-align:center;">Standings</h1>
         <asq-mashup-challenge-scoreboard>
         </asq-mashup-challenge-scoreboard>
       </section>
 
     </div>
+    <template id="buttonTemplate">
+      <paper-button class="toggle-button" raised="true">Stats</paper-button>
+    </template>
 
     <script type="text/javascript" src="js/init.js"></script>
     <script>
     (function(){
+      function addToggleButtons(){
+        document.querySelectorAll('asq-exercise').array().forEach(function(ex){
+          if(ex.role !="presenter") return;
+          var parent = ex.parentNode;
+          var template = document.querySelector('#buttonTemplate');
+          var clone = document.importNode(template.content, true);
+          parent.appendChild(clone);
+          parent.querySelector('asq-exercise asq-rating').classList.add('transparent')
+        });  
+
+        document.addEventListener("click", function(){
+          if (event.target.classList.contains('toggle-button')){
+            event.target.parentNode.querySelector('asq-exercise asq-rating').classList.toggle('transparent')
+          }
+        })   
+      }
+
       window.addEventListener('polymer-ready', function() {
         init();
+
+        if(document.body.dataset.asqRole =="presenter"){
+          addToggleButtons();
+        }
       });
       
     })();
@@ -118,9 +377,53 @@
 		}
     </script>
 		<script src="js/jquery.js"></script>
+    <script src="./bower_components/FlipClock/compiled/flipclock.min.js"></script>
     <script src="js/impress.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script>
+    impress().init();
+    </script>
+    <script>
+    // var iId;
+    // function startTimer(duration, display) {
+    //     clearInterval(iId);
+    //     var timer = duration, minutes, seconds;
+    //     iId = setInterval(function () {
+    //         minutes = parseInt(timer / 60, 10);
+    //         seconds = parseInt(timer % 60, 10);
+
+    //         minutes = minutes < 10 ? "0" + minutes : minutes;
+    //         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    //         display.textContent = minutes + ":" + seconds;
+
+    //         if (--timer < 0) {
+    //             timer = duration;
+    //         }
+    //     }, 1000);
+    // }
+
+    var clockEl = document.querySelector('#timer');
+
+    var clock = $('#timer').FlipClock(600, {
+      autoStart:false,
+      countdown: true,
+      clockFace: 'MinuteCounter'
+    });
+
+    var tenMinutes = 60 * 10;
+
+    document.addEventListener("impress:stepenter", function(e){
+      if (e.srcElement.classList.contains('timed')){
+        clock.setTime(tenMinutes)
+        clock.start();
+        clockEl.style.opacity = "1";
+      }else{
+        clock.setTime(tenMinutes)
+        clock.stop();
+        clockEl.style.opacity = "0";
+      }
+    })
+
     </script>
   </body>
 </html>

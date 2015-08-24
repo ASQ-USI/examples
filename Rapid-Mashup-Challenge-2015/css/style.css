@@ -4,63 +4,6 @@
   src: url('../fonts/Sketch_Block.ttf')  format('truetype')
 }
 
-@font-face {
-  font-family: 'Museo';
-  src: url('../fonts/Museo300-Regular.otf')  format('opentype')
-}
-
-@font-face {
-  font-family: 'Chunk Five';
-  src: url('../fonts/Chunkfive.otf')  format('opentype')
-}
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/Aller/Aller_Lt.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/Aller/Aller_LtIt.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/Aller/Aller_Rg.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/Aller/Aller_It.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/Aller/Aller_Bd') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/Aller/Aller_BdIt.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-.chunk_five{
-    font-family: "Chunk Five";
-}
-
-/*#slide01_2 h1{
-    font-family: "Chunk Five";
-}
-#slide01_3 h1{
-    font-family: "Sketch Block";
-}*/
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -70,13 +13,13 @@ body {
     line-height: 1;
 }
 ul, ol{
-	margin: 1em 0 0.5em 0;
+    margin: 1em 0 0.5em 0;
 }
 li {
-	margin-bottom: 0.8em;
+    margin-bottom: 0.8em;
 }
 input{
-	vertical-align: middle;
+    vertical-align: middle;
 }
 blockquote, q {
     quotes: none;
@@ -92,18 +35,53 @@ table {
     border-spacing: 0;
 }
 
+.text-center{
+    text-align:center;
+}
+
 
 
 body {
     font-family: 'Open Sans', sans-serif;
-/*    font-family: 'Museo', sans-serif;
-    font-weight: 300;
-    /*font-family: 'Open Sans', sans-serif;*/*/
     min-height: 740px;
-
+    padding:0;
+    margin:0;
     color: #333;
-    background: #efefef;
+    background-color: #ffffff;
+   /* background-image:url(../img/challenge-background.svg);
+    background-position:  0 -46px;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
+header{
+    position:fixed;
+    top:0;
+    background-image:url(../img/challenge-background-header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width:100%;
+    height:23%;
+}
+
+.site-content {
+  -webkit-box-flex: 8;
+  -webkit-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    background-image:url(../img/challenge-background-footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width:100%;
+    height:8%;
+}
+
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -122,7 +100,7 @@ body {
     float: left;
 }
 .pull-right{
-	float: right;
+    float: right;
 }
 
 /*
@@ -167,7 +145,7 @@ body {
 
 .step {
     position: relative;
-    width: 900px;
+    width: 990px;
     padding: 40px;
     margin: 20px auto;
 
@@ -199,26 +177,29 @@ body {
 
 .impress-enabled .step.active { opacity: 1 }
 
+.step.flash.future {opacity:0}
+.step.flash.past {opacity:0}
+
 h1{
-	font-size: 2em;
-	font-weight: 300;
+    font-size: 2em;
+    font-weight: 300;
     font-family: "Sketch Block";
-	margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 h2{
-	font-size: 1.5em;
-	font-weight: 400;
-	margin-top: 0.5em;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 0.5em;
 }
 h3{
-	font-size: 1.3em;
-	font-weight: 400;
-	margin: 0.5em 0 0.5em 0;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0.5em 0 0.5em 0;
 }
 h4{
-	font-size: 1.0em;
-	font-weight: 400;
-	margin: 0.5em 0 0.5em 0;
+    font-size: 1.0em;
+    font-weight: 400;
+    margin: 0.5em 0 0.5em 0;
 }
 
 h1.mashup-title{
@@ -234,54 +215,87 @@ h3.mashup-subtitle{
 }
 
 p{
-	font-size: 1em;
-	margin: 0.8em 0 0.5em 0;
+    font-size: 1em;
+    margin: 0.8em 0 0.5em 0;
 }
 
 p.mashup-authors{
     color: #555; font-size:0.85em; font-weight:300;
 }
 
+#timer.flip-clock-wrapper{
+    position: fixed;
+    top: 35px;
+    right: 30px;
+    width:auto;
+    transform: scale(0.5, 0.5);
+    opacity:0;
+    transition: opacity 0.3s ease-out;
+}
+
+#timer.flip-clock-wrapper .flip-clock-label{
+    display: none;
+}
+
+#powered-by-asq{
+    position: fixed;
+    font-size: 0.85em;
+    bottom: 20px;
+    left: 10px;
+    pointer-events: auto;
+}
+
+#powered-by-asq a{
+    display: inline-block;
+}
+
+#powered-by-asq img{
+    width: 80px;
+    position: relative;
+    top: 11px;
+    left:4px;
+}
+
 .nav li{
-	font-size: 0.7em;
+    font-size: 0.7em;
 }
 .nav a{
-	text-decoration: none;
+    text-decoration: none;
 }
 .nav{
-	padding-left: 0;
-	margin-bottom: 0;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 .tab-content{
-	padding-top: 0;
-	background-color: #ffffff;
-	border: 1px solid #ddd;
-	border-top: none;
+    padding-top: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-top: none;
 }
 .muted{
-	font-size: 0.8em;
-	color: #666;
-	margin: 0;
-	clear:both;
+    font-size: 0.8em;
+    color: #666;
+    margin: 0;
+    clear:both;
 }
 #progressNum{
-	margin: 15px;
+    margin: 15px;
 }
 .connected-viewers-number{
-	font-size: 0.8em;
-	color: #666;
+    font-size: 0.8em;
+    color: #666;
 }
 .asq-welcome-screen{
-	text-align: center;
+    text-align: center;
 }
 .tab-pane{
-	overflow: hidden;
+    overflow: hidden;
 }
 .tab-pane form, .tab-pane p{
-	margin-left: 20px;
+    margin-left: 20px;
 }
 .answersolutions ol{
-	padding-left: 60px;
+    padding-left: 60px;
 }
 /*
     These 'slide' step styles were heavily inspired by HTML5 Slides:
@@ -481,50 +495,83 @@ p.mashup-authors{
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
-.asq-confidence-label {
-    font-style: italic;
-    color: #555;
+
+/* ASQ Elements*/
+
+asq-welcome::shadow #qrCodeContainer{
+    text-align: center;
 }
 
-.asq-rating-widget {
-    vertical-align: middle;
-    margin-right: 1em;
+asq-rating > asq-stem,
+asq-rating-result > asq-stem{
+  display: none;
 }
 
-.asq-rating-widget > small {
-    vertical-align: text-top;
-}
-.asq-rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    margin-left: .2em;
+asq-rating-item{
+    margin: 5px 0;
 }
 
-.asq-rating-star{
-    display: inline-block;
-    position: relative;
-    width: 1.1em;
-    color: #f0ad4e;
+asq-rating-item::shadow #content{
+  text-align: right;
+  width: 370px;
 }
 
-.asq-rating .asq-rating-star:before {
-    content: "\2606";
+asq-mashup-challenge-scoreboard::shadow #scoreboard {
+  font-size: 1.1rem;
 }
 
-.asq-rating:hover .asq-rating-star:hover:before,
-.asq-rating:hover .asq-rating-star:hover ~ .asq-rating-star:before,
-.asq-rating-input:checked ~ .asq-rating-star:before {
-   content: "\2605";
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow th{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  width: 100px;
+  /*font-size: 0rem;*/
 }
 
-.asq-rating:hover .asq-rating-star:before {
-    content: "\2606";
+/* name cells*/
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow .column-0{
+  width: 115px;
+  text-align: left;
 }
 
-.asq-rating:hover .asq-rating-input:checked + .asq-rating-star:before {
-    color: #5cb85c;
+/* rank cells*/
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow .column-1{
+  width: 70px;
 }
 
-.asq-rating-input {
-    display: none;
+/* rank cells*/
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow .column-2{
+  width: 70px;
+}
+
+/* rank cells*/
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow .column-6{
+  width: 180px;
+}
+
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow td{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow td.name-cell{
+  text-align: left;
+}
+
+asq-mashup-challenge-scoreboard::shadow #scoreboard::shadow th:after{
+  font-size: 0.7em;
+  line-height: 1;
+}
+
+ .toggle-button {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+asq-rating{
+  transition: opacity 0.1s ease-out;
+}
+
+asq-rating.transparent{
+  opacity:0;
 }
